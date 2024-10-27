@@ -1,4 +1,4 @@
-# 🌍 ROAMIO - Your Ultimate Travel Companion 🌍
+# 🌍 ROAMIO - Your Ultimate Travel Planner 🌍
 
 Welcome to **ROAMIO**, the travel planner that makes organizing your dream trips simple, fun, and stress-free! From building personalized itineraries to budgeting and tracking weather, ROAMIO has everything you need to embark on unforgettable adventures. Whether you’re planning a weekend getaway or a month-long excursion, we've got you covered! 🌄✈️
 
