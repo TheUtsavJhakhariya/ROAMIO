@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatPad</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: url('https://img.freepik.com/premium-vector/abstract-fluid-3d-effect-gradient-blur-background_322384-2455.jpg');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .chat-container {
+      width: 60%;
+      height: 80%;
+      background-color: rgba(255, 255, 255, 0.286);
+      display: flex;
+      flex-direction: column;
+      border-radius: 25px;
+      backdrop-filter: blur(5px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .chat-log {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      max-height: calc(100% - 60px); /* Allow space for input area */
+    }
+
+    .chat-form {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 35px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .chat-form input[type="text"] {
+      flex: 1;
+      border-radius: 20px;
+      padding: 10px;
+      font-size: 14px;
+      border: none;
+      outline: none;
+      margin-right: 10px;
+    }
+
+    .chat-form input[type="file"] {
+      display: none;
+    }
+
+    .file-label {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .chat-form button {
+      padding: 10px 20px;
+      background-color: #000;
+      border-radius: 20px;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .msg {
+      margin-bottom: 10px;
+      background-color: #e2e2e2;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      word-wrap: break-word;
+    }
+
+    .msgtime {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.5);
+      margin-left: 10px;
+    }
+
+    .delete {
+      color: red;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bolder;
+      margin-right: 10px;
+      margin-left: 20px;
+    }
+
+    /* Image message styling */
+    .msg img {
+      max-width: 200px;
+      border-radius: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .chat-container {
+        width: 90%;
+        height: 80%;
+      }
+
+      .chat-form input[type="text"] {
+        font-size: 12px;
+      }
+
+      .chat-form button,
+      .file-label {
+        padding: 5px 10px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .chat-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .chat-form input[type="text"] {
+        font-size: 12px;
+      }
+    }
+
+    /* Chat container styles */
+.chat-container {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f945;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the chat log */
+  .chat-log {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Chat form input styles */
+  .chat-form {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat-form input[type="text"] {
+    flex: 1;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+.chat-form button {
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#recordBtn {
+    background-color: red;
+    color: white;
+}
+
+#playBtn {
+    background-color: green;
+    color: white;
+}
+
+  
+  .chat-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* File input styling */
+  #file-input {
+    display: none;
+  }
+  
+  .file-label {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Download PDF button */
+  .download-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    background-color: #2878a7;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Hover effect for download button */
+  .download-btn:hover {
+    background-color: #135b85;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .download-btn {
+      padding: 8px 15px;
+      font-size: 12px;
+      right: 10px;
+    }
+  }
+
+  
+
+  </style>
+</head>
+<body>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-log" id="chat-log"></div>
+    
+        <div class="chat-form">
+          <input type="file" id="file-input" accept="image/*">
+          <label for="file-input" class="file-label"><i class="fas fa-paperclip"></i></label>
+    
+          <input type="text" id="msg-input" placeholder="Enter your message here..." onkeydown="if (event.keyCode == 13) sendMsg()">
+          
+          <!-- Record and Play buttons, play hidden initially -->
+          <button id="recordBtn" class="btn btn-danger"><i class="fas fa-microphone"></i></button>
+          <button id="playBtn" class="btn btn-success" style="display: none;"><i class="fas fa-play"></i></button>
+          <button onclick="sendMsg()" class="btn btn-primary">Send</button>
+        </div>
+
+        
+        <!-- Subtly placed Download button -->
+        <button id="downloadPdfBtn" class="download-btn">Download PDF</button>
+    </div>
+    
+      
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script>
+// Initialize speech recognition and synthesis
+const recognition = new window.webkitSpeechRecognition();
+const synthesis = window.speechSynthesis;
+let audioText = "";
+
+// Start recording on click
+document.getElementById('recordBtn').addEventListener('click', function() {
+  recognition.start();
+});
+
+// On speech result, convert to text and display it
+recognition.onresult = function(event) {
+  audioText = event.results[0][0].transcript;
+  document.getElementById('msg-input').value = audioText;
+
+  // Show the play button and hide the record button
+  document.getElementById('playBtn').style.display = 'inline-block';
+  document.getElementById('recordBtn').style.display = 'none';
+};
+
+// Play back the recorded message
+document.getElementById('playBtn').addEventListener('click', function() {
+  const utterance = new SpeechSynthesisUtterance(audioText);
+  synthesis.speak(utterance);
+});
+
+// Send the message (either typed or recorded)
+function sendMsg() {
+  var inputUser = document.getElementById('msg-input');
+  var chats = document.getElementById('chat-log');
+
+  if (inputUser.value !== '') {
+    var newMsg = document.createElement('div');
+    newMsg.classList.add('msg');
+    newMsg.textContent = inputUser.value;
+
+    var msgDetails = document.createElement('div');
+    msgDetails.style.display = 'flex';
+    msgDetails.style.alignItems = 'center';
+
+    var msgTime = document.createElement('div');
+    msgTime.classList.add('msgtime');
+    msgTime.textContent = new Date().toLocaleString();
+
+    var deleteBtn = document.createElement('span');
+    deleteBtn.classList.add('delete');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.onclick = function () {
+      newMsg.remove();
+      msgDetails.remove();
+    };
+
+    msgDetails.appendChild(msgTime);
+    msgDetails.appendChild(deleteBtn);
+
+    newMsg.appendChild(msgDetails);
+
+    chats.appendChild(newMsg);
+    inputUser.value = ''; // Clear the input field
+
+    // Reset buttons: Hide play button, show record button
+    document.getElementById('playBtn').style.display = 'none'; // Hide play button after message sent
+    document.getElementById('recordBtn').style.display = 'inline-block'; // Show record button again
+    audioText = ''; // Reset audio text so the user can record a new message
+
+    chats.scrollTop = chats.scrollHeight; // Auto-scroll to the latest message
+  }
+}
+
+// Function to send an image message
+document.getElementById('file-input').addEventListener('change', function () {
+  var chats = document.getElementById('chat-log');
+  var file = this.files[0];
+
+  if (file) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      var newMsg = document.createElement('div');
+      newMsg.classList.add('msg');
+
+      var img = document.createElement('img');
+      img.src = e.target.result;
+
+      var msgDetails = document.createElement('div');
+      msgDetails.style.display = 'flex';
+      msgDetails.style.alignItems = 'center';
+
+      var msgTime = document.createElement('div');
+      msgTime.classList.add('msgtime');
+      msgTime.textContent = new Date().toLocaleString();
+
+      var deleteBtn = document.createElement('span');
+      deleteBtn.classList.add('delete');
+      deleteBtn.textContent = 'Delete';
+      deleteBtn.onclick = function () {
+        newMsg.remove();
+        msgDetails.remove();
+      };
+
+      msgDetails.appendChild(msgTime);
+      msgDetails.appendChild(deleteBtn);
+
+      newMsg.appendChild(img); // Attach the image
+      newMsg.appendChild(msgDetails);
+
+      chats.appendChild(newMsg);
+      chats.scrollTop = chats.scrollHeight; // Auto-scroll to the latest message
+    };
+
+    reader.readAsDataURL(file); // Read the file and trigger the onload event
+  }
+});
+
+    // Function to download chat as PDF
+    const downloadBtn = document.getElementById("downloadPdfBtn");
+
+    downloadBtn.addEventListener("click", () => {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      
+      // Set initial Y position in PDF document
+      let yPosition = 20;
+    
+      // Fetch all messages from the chat log
+      const messages = document.querySelectorAll('.msg');
+      const timestamp = new Date().toLocaleString();
+    
+      doc.setFontSize(16);
+      doc.text("Chat History", 10, 10);
+      doc.setFontSize(12);
+      doc.text(`Downloaded on: ${timestamp}`, 10, 15);
+    
+      // Loop through each message
+      messages.forEach((message) => {
+        const textElement = message.childNodes[0];
+        const msgTime = message.querySelector('.msgtime').innerText;
+    
+        // If the message contains text
+        if (textElement.nodeType === Node.TEXT_NODE) {
+          const msgText = textElement.textContent.trim();
+          doc.setFontSize(12);
+          doc.text(`Message: ${msgText}`, 10, yPosition);
+          yPosition += 8; // Add spacing for each new message
+    
+          doc.setFontSize(10);
+          doc.text(`Time: ${msgTime}`, 10, yPosition);
+          yPosition += 12; // Add spacing after timestamp
+        }
+    
+        // If the message contains an image
+        const imgElement = message.querySelector('img');
+        if (imgElement) {
+          const imgSrc = imgElement.src;
+    
+          // Add the image to the PDF
+          doc.addImage(imgSrc, 'JPEG', 10, yPosition, 50, 50); // Resizing the image to fit
+          yPosition += 60; // Add spacing after the image
+    
+          doc.setFontSize(10);
+          doc.text(`Time: ${msgTime}`, 10, yPosition);
+          yPosition += 12; // Add spacing after timestamp
+        }
+    
+        // Check if yPosition exceeds page height, and add a new page
+        if (yPosition > 280) {
+          doc.addPage();
+          yPosition = 20; // Reset yPosition for the new page
+        }
+      });
+    
+      // Save the PDF with the name 'chat-history.pdf'
+      doc.save("chat-history.pdf");
+    });
+    
+  </script>
+
+  <!-- Font Awesome CDN for Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>
