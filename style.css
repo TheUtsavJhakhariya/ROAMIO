@@ -1,0 +1,2181 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+/* ================================================== Buttons ==================================================*/
+
+
+.getstartedbtn{
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+}
+
+.getstartedbtn:hover{
+  background-color: #005bbc;
+  transition: 0.3s;
+}
+
+.learnmorebtn{
+    text-decoration: none;
+  padding: 10px 20px;
+  background-color: #424242;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  margin-left: 10px;
+}
+
+.learnmorebtn:hover{
+  background-color: #303030;
+  transition: 0.3s;
+}
+
+.featurebutton{
+  background-color: black;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.featurebutton:hover{
+  background-color: #007bff;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+
+.testbutton{
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.testbutton:hover{
+  background-color: #000;
+  color: white;
+  transition: 0.3s;
+}
+
+.calculatebtn{
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+}
+
+
+.weatherbtn{
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.weatherbtn:hover{
+  transform: none;
+}
+
+.preplanbtn{
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+
+.basicpricebtn{
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+.basicpricebtn:hover{
+  background-color: #004fa2;
+}
+
+.propricebtn{
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  padding: 10px 20px;
+}
+.propricebtn:hover{
+  background-color: #007bff;
+  color: #fff;
+}
+
+.offcanvas-body .book{
+  background-color: rgb(34, 203, 0);
+  border-radius: 20px;
+}
+
+.offcanvas-body .share{
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+
+
+
+
+/* ================================================== Buttons ==================================================*/
+
+/* ================================================== welcome Styles ==================================================*/
+
+.welcome-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: center;
+}
+.welcome-container h1 {
+  font-size: 36px;
+  color: #000000;
+  font-weight: bold;
+}
+.welcome-container p {
+  font-size: 18px;
+}
+
+/* ================================================== welcome Styles ==================================================*/
+/* ================================================== Header and Navbar Styles ==================================================*/
+/* Stylish Navbar */
+.custom-navbar {
+  background: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkwNC1udW5ueS0wMTIteC1qb2I1OTguanBn.jpg');
+  background-size: cover;
+  width: 80%; /* Smaller width for a sleek look */
+  margin: 20px auto;
+  border-radius: 60px;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Navbar brand logo styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 50px;  /* Adjust this height based on your design */
+  width: auto;
+  max-height: 50px;  /* Ensures logo is constrained within navbar height */
+  transition: transform 0.3s ease; /* Adds a smooth transition */
+}
+
+/* Hover effect for a slight scale-up */
+.navbar-brand:hover .brand-logo {
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brand-logo {
+      height: 40px;  /* Reduce logo size on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-logo {
+      height: 35px; /* Smaller size for very small devices */
+  }
+}
+
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #000000; /* Black text for the links */
+  padding: 8px 15px;
+  border-radius: 25px; /* Slight rounding for each link */
+  transition: background-color 0.2s ease; /* Subtle transition */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: transparent; /* Light grey background on hover */
+  color: #ffffff; /* Keep text black on hover */
+  text-decoration: none; /* No underline */
+  transform: translateY(-1px); /* Slight lift */
+}
+
+/* Active Page Styling */
+.nav-link.active {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for active link */
+  transform: none; /* No hover effect for active link */
+}
+
+/* Navbar Layout Adjustments */
+.navbar-nav .nav-item {
+  margin-left: 5px;
+}
+
+.navbar {
+  padding: 1rem 1.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+  .custom-navbar {
+    width: 90%; /* Wider on smaller screens for better readability */
+    border-radius: 0;
+    padding: 15px 20px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 7px 10px;
+  }
+
+
+}
+
+
+/* ================================================== Header and Navbar Styles ==================================================*/
+
+
+
+/* Button Styles */
+button {
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0069d9;
+    transform: translateY(-3px);
+}
+
+/* Section Headings */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Day Section Styles */
+.day-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.day-section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.droppable {
+    background-color: #eef2f7;
+    border: 2px dashed #007bff;
+}
+
+.draggable {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.draggable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Suggested Activities */
+.activity-box {
+    background-color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.activity-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* ================================================== Footer Styles ==================================================*/
+ footer {
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.footer-section {
+  background: url('https://img.freepik.com/premium-vector/abstract-fluid-3d-effect-gradient-blur-background_322384-2457.jpg') no-repeat center center/cover;
+  position: relative;
+  color: #000000;
+}
+
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.256); /* Semi-transparent white overlay */
+  z-index: 1;
+}
+
+.footer-section .container {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+footer h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffdd57;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #dcdcdc;
+} 
+
+.newsletter-signup p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.newsletter-signup .form-control {
+  border-radius: 30px;
+  border: 2px solid #000000;
+}
+
+.newsletter-signup .input-group{
+  max-width: 20rem;
+}
+
+.newsletter-signup .btn-warning {
+  background-color: #080808;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+}
+
+.newsletter-signup .btn-warning:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+
+.social-links {
+  display: flex;
+  justify-content: start;
+}
+
+.social-icon {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #000;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.social-icon i {
+  vertical-align: middle;
+}
+
+
+/* Add individual color effects for each social media on hover */
+.social-icon:hover i.fa-facebook-f {
+  color: #3b5998;
+}
+
+.social-icon:hover i.fa-twitter {
+  color: #1da1f2;
+}
+
+.social-icon:hover i.fa-instagram {
+  color: #e1306c;
+}
+
+.social-icon:hover i.fa-linkedin-in {
+  color: #0077b5;
+}
+
+.social-icon:hover i.fa-youtube {
+  color: #ff0000;
+}
+
+.social-icon:hover i.fa-pinterest {
+  color: #bd081c;
+}
+
+.copyright{
+  color: #000;
+}
+
+
+/* Footer brand logo styling */
+.footer-brand {
+  display: flex;
+  justify-content: left;  /* Centers the logo horizontally */
+  align-items: left;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.footer-logo {
+  height: 60px;  /* Adjust based on the footer design */
+  width: auto;
+  max-height: 60px;
+  opacity: 0.8;  /* Slightly dimmed for a subtle effect */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for a slight brightness */
+.footer-logo:hover {
+  opacity: 1;  /* Restores full opacity on hover */
+  transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-logo {
+      height: 55px; /* Smaller size for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-logo {
+      height: 50px; /* Smallest size for mobile screens */
+  }
+}
+
+
+/* ================================================== Footer Styles ==================================================*/
+
+
+
+
+/* Why Reach Out Section */
+.whyreachout {
+  background: url('https://img.freepik.com/premium-vector/blue-abstract-shape-aesthetic-gradient-blur-background_654039-26.jpg') center/cover no-repeat;
+  min-height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #000;
+}
+.whyreachout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5) 30%,rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 1)); /* Adds fading effect at top and bottom */
+  z-index: 1;
+}
+.whyreachout h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.whyreachout h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.whyreachout p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling for Weather Forecast Section */
+.weather-section {
+  background:url('https://img.freepik.com/premium-vector/blue-abstract-shape-aesthetic-gradient-blur-background_654039-26.jpg');
+  background-size: cover; /* Light gradient background */
+  padding: 60px 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/* Container Styling */
+.weather-container {
+  max-width: 500px;
+  margin: 20px auto;
+  background: #ffffff5d;
+  backdrop-filter: blur(5px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Heading */
+.weather-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.weather-section p.lead {
+  color: #000000;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+.weather-section .form-label {
+  font-weight: 600;
+  color: #000000;
+}
+
+.weather-section .form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.weather-section .form-control:focus {
+  border-color: #303030;
+  outline: none;
+}
+
+
+/* Weather Display Styling */
+.weather-section .weather-info {
+  background: #f1f8ff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide initially */
+}
+
+#city-name {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#weather-description {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.weather-section .temperature-display {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .weather-section .weather-section h2 {
+      font-size: 2rem;
+  }
+  .weather-section .weather-container {
+      padding: 30px;
+  }
+  #city-name {
+      font-size: 1.5rem;
+  }
+  .weather-section .temperature-display {
+      font-size: 1.7rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling for Currency Exchange Section */
+.currency-exchange-section {
+  background: #fff;
+  padding: 80px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exchange-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Heading and Text Styling */
+h2 {
+  font-size: 1.8rem;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Form and Input Styling */
+.form-group label {
+  font-weight: 600;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #000000;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.399);
+  transition: all 0.3s ease;
+}
+
+
+
+
+.budget-form .row .form-group .form-control{
+  background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Submit Button Styling */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Result Styling */
+#currency-result {
+  margin-top: 20px;
+  color: #007bff;
+}
+
+#exchange-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.unique-404-container {
+    margin-top: 20px; /* Adjust top margin as needed */
+  }
+  
+  .unique-404-header {
+    font-size: 8rem; /* Large size for 404 */
+    font-weight: bold;
+  }
+  
+  .unique-404-subheader {
+    font-size: 2rem; /* Size for the subheading */
+    color: #333; /* Darker color for contrast */
+  }
+  
+  .unique-404-message {
+    font-size: 1.2rem; /* Size for the message */
+    color: #777; /* Lighter color for the message */
+  }
+  
+  .unique-404-button {
+    font-size: 1.2rem; /* Size for the button text */
+    padding: 10px 30px; /* Padding for the button */
+  }
+  
+
+
+/* ================================================== Parallax Background ==================================================*/
+
+  .parallax-container {
+    height: 100vh;
+    display: flex; /* Flexbox to center the parallax */
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.parallax {
+    background-image: url('https://i.ytimg.com/vi/-EpAAZkcBAg/maxresdefault.jpg');
+    height:90vh; /* 100% of viewport width */
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    background-size: cover;
+    margin: 2%;
+    display: flex; /* Center the content inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax .glass-effect {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    height: 100%; /* Full height of the parallax */
+    width: 100%; /* Full width of the parallax */
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000; /* Dark text color */
+    position: relative; /* Relative positioning */
+}
+
+
+.parallax .cta-button {
+    margin: 10px;
+}
+
+  .parallax h1 {
+    color: #ffffff;
+}
+.parallax p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    color: #ffffff;
+}
+
+/* ================================================== Parallax Background ==================================================*/
+
+
+.blog-card {
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-content {
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.modal-header {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.modal-footer {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.carousel-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card {
+    border: none;
+    text-align: left;
+}
+
+
+.destination-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.destination-info {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+padding: 0; /* Remove extra padding */
+margin: 0; /* Remove extra margin */
+width: auto; /* Set width to fit the icon */
+height: auto; /* Set height to fit the icon */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+width: 30px;  /* Adjust icon size */
+height: 30px; /* Adjust icon size */
+background-color: black;
+border-radius: 50%; /* Keep button circular */
+}
+
+.fas {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+.fas:hover {
+    color: rgb(85, 85, 85);
+}
+
+.star-rating {
+    color: gold;
+    margin-right: 10px;
+}
+
+  .contact-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 5rem 0;
+    }
+    .contact-image {
+      flex: 1;
+      min-width: 300px; /* Ensures the image doesn't get too small */
+    }
+    .contact-form {
+      flex: 1;
+      max-width: 500px; /* Max width for form */
+      margin-left: 30px; 
+      align-items: left;
+    }
+    .contact-image img {
+      width: 100%; /* Make the image responsive */
+      border-radius: 10px; /* Rounded corners for the image */
+    }
+    .form-label {
+      font-weight: bold; /* Bold labels for better visibility */
+    }
+    .rounded-image {
+      border-radius: 20px; /* Adjust the radius for more or less rounding */
+    }
+    
+
+  .faq-section h2 {
+    font-weight: bold;
+  }
+
+  /* --------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+  .faq-section {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)), url('') no-repeat center center/cover;
+    border-radius: 15px;
+    padding: 60px 0;
+  }
+  
+  .faq-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .accordion-button {
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .accordion-button:hover {
+    background-color: #ddd;
+    color: #0056b3;
+  }
+  
+  .accordion-button i {
+    color: #007bff;
+  }
+  
+  .accordion-body {
+    background-color: #ffffff;
+    color: #555;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+  }
+  
+  .accordion-item {
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  .accordion-button::after {
+    font-size: 1.3rem;
+  }
+  
+  .accordion-button.collapsed::after {
+    transform: rotate(-90deg);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* --------------------------------------------------------------------------------------------------*/
+  .pricing-section {
+  padding: 5rem 0;
+}
+
+.pricing-section h2 {
+  font-weight: bold;
+  color: #000000;
+}
+
+.pricing-card {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+  background: none;
+}
+
+.pricing-card::before {
+  content: "";
+  background-image: url('https://media.istockphoto.com/id/1188904994/photo/abstract-3d-art-background-holographic-floating-liquid-blobs-soap-bubbles-metaballs.jpg?s=612x612&w=0&k=20&c=C5nt6C3PX6vYaDMNss9qL_X07_zon63Um-zGlAruAes=');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.blur-container {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.pricing-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pricing-section .blur-container ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.pricing-section .fas {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.pricing-section .fas.fa-check {
+  color: green;
+  font-size: 20px;
+}
+
+.pricing-section .fas.fa-times {
+  color: red;
+  font-size: 23px;
+}
+
+.pricing-section .btn-outline-primary,
+.pricing-section .btn-primary {
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+.pricing-section .btn-outline-primary {
+  background-color: #ffffff;
+  color: #007bff;
+  border: #fff;
+}
+.pricing-section .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+  /* --------------------------------------------------------------------------------------------------*/
+  .pre-planned-trips h2 {
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .glass-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-wrapper {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+  }
+  
+  .card-img-top {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+  
+  .glass-offcanvas {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.478);
+  }
+  
+  .wide-offcanvas {
+    margin: 20px;
+    width: 35% !important;
+  }
+
+  .offcanvas-end{
+    margin: 20px;
+    width: 35% !important;
+  }
+
+  
+  .offcanvas-body ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .offcanvas-body ul li i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  
+  .gallery-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .offcanvas{
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.478);
+  }
+  .offcanvas-body img{
+    border-radius: 20px;
+  }
+
+
+  @media (max-width: 768px) {
+    .wide-offcanvas {
+      margin: 20px;
+      width: 65% !important;
+    }
+    .offcanvas{
+      width: 65% !important;
+    }
+  }
+  
+  @media (max-width: 426px) {
+    .wide-offcanvas {
+      margin: 20px;
+      width: 85% !important;
+    }
+
+    .offcanvas{
+      width: 85% !important;
+    }
+  }
+
+  /* --------------------------------------------------------------------------------------------------*/
+
+  
+  /* --------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+  /* --------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Hero Section Styling */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 50px;
+  height: 60vh;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 25px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.195); /* Dark overlay */
+  z-index: 0;
+}
+
+.hero .container {
+  z-index: 1; /* Ensure the text and input elements stay above the overlay */
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Search Box Styling */
+.search-box {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  border-radius: 10px 0 0 10px;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.search-btn {
+  border-radius: 0 10px 10px 0;
+  background-color: #ffffff;
+  color: #000;
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.search-btn:hover {
+  background-color: rgba(107, 107, 107, 0.371);
+  color: #ffffff;
+}
+
+
+/* General Styles Above */
+
+@media (max-width: 1200px) {
+  /* Adjust font size and layout for large desktops and laptops */
+  .hero h1 {
+    font-size: 3rem; /* Slightly reduce heading size */
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .search-input {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .search-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Targeting tablets and small laptops */
+  .hero {
+    height: 90vh; /* Slightly reduce the hero height */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .search-input {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .search-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Targeting larger mobile devices and small tablets */
+  .hero {
+    height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Reduce heading size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-input {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    width: 65%; /* Reduce width of input field */
+  }
+
+  .search-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Targeting phones */
+  .hero {
+    height: auto; /* Allow hero section to adjust height dynamically */
+    padding: 2rem 1rem; /* Add padding to container for better spacing */
+  }
+
+  .hero h1 {
+    font-size: 1.75rem; /* Further reduce heading size */
+    line-height: 2rem; /* Adjust line-height for better readability */
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-box {
+    flex-direction: column; /* Stack input and button vertically */
+  }
+
+  .search-input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    border-radius: 50px; /* Round input field for a more mobile-friendly look */
+    width: 100%; /* Full width input on smaller devices */
+    margin-bottom: 1rem; /* Add space between input and button */
+  }
+
+  .search-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+    width: 100%; /* Full width button */
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Targeting very small screens (e.g., small mobile devices) */
+  .hero {
+    height: auto;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Make the heading smaller for extra small screens */
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .search-input {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .search-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling for Budget Calculator Section */
+.budget-section {
+  background:url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdHAyMzgtYmFja2dyb3VuZC0wOC5qcGc.jpg');
+  background-size: cover; /* Light blue gradient */
+  padding: 60px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.budget-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.budget-section p.lead {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Form Input Fields */
+.form-group label {
+  font-weight: 600;
+  color: #000000;
+}
+
+.form-control {
+  border-radius: 10px 0 0 10px ;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Calculate Button */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Total Budget Display */
+#total-budget {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #28a745; /* Green color for emphasis */
+}
+
+.budget-section h3 {
+  color: #333;
+}
+
+/* Content Filler and Enhanced Interactivity */
+.budget-section h3::after {
+  content: " Start planning your dream trip with confidence!";
+  font-size: 1rem;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .budget-section h2 {
+      font-size: 2rem;
+  }
+
+  .form-control, .btn-primary {
+      font-size: 1rem;
+      padding: 10px;
+  }
+
+  #total-budget {
+      font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* --------------------------------------------------------------------------------------------------*/
+
+
+ /* Testimonials Section Styling */
+.testimonials {
+  background: url('https://img.freepik.com/premium-vector/blue-abstract-shape-aesthetic-gradient-blur-background_654039-26.jpg') no-repeat center center/cover; /* Replace with your background image URL */
+  height: 700px;
+  position: relative;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.testimonial-header {
+  background: url('hhttps://img.freepik.com/free-vector/gradient-light-peach-background_23-2150246345.jpg?semt=ais_hybrid') center/cover no-repeat;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+
+.testimonial-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.testimonial-header p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.testimonials .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Testimonial Card Styling */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.405); /* Light background with transparency */
+  backdrop-filter: blur(10px); /* Blur effect for the background */
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.testimonial-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Heading and Paragraph Styling */
+.testimonials h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.testimonial-card h5 {
+  font-size: 1.1rem;
+  color: #000000;
+  margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 577px) and (max-width: 768px) {
+  .testimonials {
+    background-size: cover; /* Ensure background image covers the section */
+    min-height: 1000px;
+    padding: 15px;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem; /* Smaller heading for mobile */
+  }
+
+  .testimonial-card {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .testimonial-card img {
+    width: 60px; /* Adjust image size for smaller devices */
+    height: 60px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .testimonials {
+    background-size: cover; /* Ensure background image adapts to mobile screens */
+    min-height: 1000px;
+  }
+
+  .testimonials h2 {
+    font-size: 1.8rem; /* Even smaller heading for very small screens */
+  }
+
+  .testimonial-card {
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .testimonial-card img {
+    width: 50px; /* Smaller image size */
+    height: 50px;
+  }
+}
+
+
+.star-rating i {
+  font-size: 1.2rem;
+  margin-right: 5px;
+  color: #ffc107;
+}
+
+/* Fun Statistics Section */
+.fun-stats {
+  background: url('https://img.freepik.com/premium-photo/abstract-gradient-background_621486-3510.jpg');
+  background-size: cover;
+  margin: 5%;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  padding: 60px 0;
+}
+
+.fun-stats h3 {
+  font-size: 3rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.fun-stats p {
+  font-size: 1.25rem;
+  color: #000;
+  margin-top: 10px;
+}
+
+/* Video Testimonials Section */
+.video-testimonials h2 {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Video container styling */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Text styling */
+.video-testimonials p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .video-wrapper {
+    padding-bottom: 75%; /* Adjust for smaller screen sizes */
+  }
+
+  .video-testimonials p {
+    font-size: 1rem;
+  }
+}
+
+/* Media Query for very small devices */
+@media (max-width: 576px) {
+  .video-wrapper {
+    padding-bottom: 100%; /* Square aspect ratio for very small screens */
+  }
+
+  .video-testimonials p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Featured Customer Stories Section */
+
+.customer-stories{
+  background: url('https://img.freepik.com/premium-photo/abstract-gradient-background_621486-3502.jpg');
+  background-size: cover;
+}
+.customer-stories h2 {
+  font-weight: bold;
+  color: #111111;
+}
+
+.customer-stories .card {
+  border-radius: 15px;
+  background-color: #ffffff41;
+  padding: 11px 10px;
+  transition: all 0.3s ease;
+}
+
+.customer-stories .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.customer-stories .card-img-top {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.customerbutton{
+  background-color: #ffff;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.customer-stories .card-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.customer-stories .card-text {
+  color: #555;
+}
+
+.customer-stories .btn-primary {
+  border-radius: 30px;
+  padding: 10px 25px;
+}
+
+/* Call to Action Section */
+.call-to-action {
+  background-color: #6c757d;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.call-to-action h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.call-to-action p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.call-to-action .btn-lg {
+  padding: 10px 40px;
+  font-size: 1.25rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.call-to-action .btn-lg:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Call to Action Section */
+.call-to-action {
+  background: linear-gradient(to right, rgba(0, 123, 255, 0), rgba(40, 167, 70, 0)), 
+              url('https://img.freepik.com/premium-photo/blurred-abstract-gradient-background-with-noise-textur_391867-3.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+  margin: 5%;
+  padding: 60px 20px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Frosted Glass Effect */
+.call-to-action::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Ensures content is on top of frosted glass overlay */
+}
+
+/* Text Styling */
+.cta-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.cta-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #2f2f2f;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-heading {
+      font-size: 2rem;
+  }
+  .cta-text {
+      font-size: 1rem;
+      max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .tagthing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 100px auto; /* Adds space above and below for scrolling */
+            padding: 0 20px;
+        }
+
+        /* Left Section: Stylish Heading, Paragraph, and Button */
+        .tagthing .text-content {
+            max-width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .tagthing .text-content h1 {
+            font-size: 3rem;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .tagthing .text-content p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .tagthing .text-content button {
+            background-color: #009dff;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: fit-content;
+        }
+
+        .tagthing .text-content button:hover {
+            background-color: #006aff;
+        }
+
+        /* Right Section: Tags with Famous City Names */
+        .tagthing .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            max-width: 50%;
+        }
+
+        .tagthing .tag {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border-radius: 45px;
+            border: #000000 2px solid;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            opacity: 0;
+            position: relative;
+            right: -0%;
+        }
+
+        .tagthing .tag.active, .tag:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* Smoother Animation */
+        .tagthing .tag.animate {
+            animation: slide-in 1.5s ease-in-out forwards;
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateX(-80%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Staggered animation */
+        .tagthing .tag:nth-child(1) { animation-delay: 0.2s; }
+        .tagthing .tag:nth-child(2) { animation-delay: 0.4s; }
+        .tagthing .tag:nth-child(3) { animation-delay: 0.6s; }
+        .tagthing .tag:nth-child(4) { animation-delay: 0.8s; }
+        .tagthing .tag:nth-child(5) { animation-delay: 1s; }
+        .tagthing .tag:nth-child(6) { animation-delay: 1.2s; }
+        .tagthing .tag:nth-child(7) { animation-delay: 1.4s; }
+        .tagthing .tag:nth-child(8) { animation-delay: 1.6s; }
+        .tagthing .tag:nth-child(9) { animation-delay: 1.8s; }
+        .tagthing .tag:nth-child(10) { animation-delay: 2s; }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .tagthing {
+                flex-direction: column;
+                align-items: left;
+            }
+            
+            .tagthing .text-content {
+                max-width: 100%;
+                text-align: left;
+                margin-top: 20px;
+            }
+
+            .tagthing .tag {
+              padding: 10px 15px;
+              background-color: rgb(255, 255, 255);
+              color: rgb(0, 0, 0);
+              border-radius: 45px;
+              border: #000000 2px solid;
+              font-weight: bold;
+              font-size: 1rem;
+              cursor: pointer;
+              transition: background-color 0.3s, color 0.3s;
+              opacity: 0;
+              position: relative;
+              right: 0%;
+          }
+
+          .tagthing .tag-cloud {
+                max-width: 100%;
+                justify-content: left;
+                margin-top: 20px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #chat-button {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #00000087;
+          backdrop-filter: blur(5px);
+          color: white;
+          border-radius: 30%;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+          transition: background-color 0.3s ease;
+          text-decoration: none;
+      }
+      
+      #chat-button:hover {
+        background-color: #000000d4;
+      }
+      
+      #chat-button i {
+          pointer-events: none;
+      }
+      
