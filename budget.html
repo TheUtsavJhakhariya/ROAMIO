@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta name="description" content="Calculate your travel budget and track expenses with our easy-to-use budget calculator.">  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta name="keywords" content="travel, budget calculator, trip planner, calculate expenses">
+  <meta name="author" content="Utsav Jhakhariya">
+  <link rel="icon" href="R.png" type="image/png">
+  <title>ROAMIO | Travel Planner</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Include Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Roamio Logo" class="brand-logo">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wow.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="itinerary.html">Itinerary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="budget.html">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="weather.html">Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="testimonial.html">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+
+<br><br>
+
+<section class="testimonial-header bg-cover py-5">
+  <div class="container text-center text-black">
+    <h2 class="display-3 font-weight mb-3">📊 Plan Your Travel Budget</h2>
+    <p class="lead mb-5">Estimate and organize your trip expenses effortlessly with our Budget Planner. From accommodations to activities, keep track of every cost to make your journey stress-free and memorable.</p>
+    <p class="lead">Start planning today to make the most of your travel experience without worrying about finances. Your dream adventure is just a few calculations away!</p>
+  </div>
+</section>
+
+<br><br>
+
+
+  <!-- Budget Calculator Section -->
+  <section class="budget-section py-5">
+    <div class="container">
+      <br><br>
+      <h2 class="text-center mb-4">🔢 Travel Budget Calculator</h2>
+      <p class="lead text-center">Estimate your trip expenses and track your travel budget with our easy-to-use calculator.</p>
+
+      <!-- Budget Form -->
+      <form id="budget-form" class="mb-5">
+        <div class="row">
+          <!-- Accommodation -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="form-group">
+              <label for="accommodation">Accommodation Costs</label>
+              <input type="number" class="form-control" id="accommodation" placeholder="Enter accommodation costs" min="0">
+            </div>
+          </div>
+
+          <!-- Flights -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="form-group">
+              <label for="flights">Flight Costs</label>
+              <input type="number" class="form-control" id="flights" placeholder="Enter flight costs" min="0">
+            </div>
+          </div>
+
+          <!-- Food -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="form-group">
+              <label for="food">Food Costs</label>
+              <input type="number" class="form-control" id="food" placeholder="Enter food costs" min="0">
+            </div>
+          </div>
+
+          <!-- Transportation -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="form-group">
+              <label for="transportation">Transportation Costs</label>
+              <input type="number" class="form-control" id="transportation" placeholder="Enter transportation costs" min="0">
+            </div>
+          </div>
+
+          <!-- Activities -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="form-group">
+              <label for="activities">Activities & Tours</label>
+              <input type="number" class="form-control" id="activities" placeholder="Enter activities costs" min="0">
+            </div>
+          </div>
+
+          <!-- Miscellaneous -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="form-group">
+              <label for="miscellaneous">Miscellaneous Costs</label>
+              <input type="number" class="form-control" id="miscellaneous" placeholder="Enter miscellaneous costs" min="0">
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-100">Calculate Total</button>
+      </form>
+
+      <!-- Total Budget Display -->
+      <div class="text-center">
+        <h3 class="mb-4">Total Estimated Budget: <span id="total-budget">$0</span></h3>
+      </div>
+      <br><br>
+    </div>
+  </section>
+
+
+  <!-- Floating Sticky Chat Button -->
+<a href="one.html" id="chat-button" title="Chat with us">
+  <i class="fas fa-comment text-white"></i>
+</a>
+<!-- Currency Exchange Section -->
+<!-- Currency Exchange Section -->
+<section class="currency-exchange-section d-flex align-items-center justify-content-center">
+  <div class="container exchange-container">
+      <h2 class="text-center mb-4">💱 Currency Exchange</h2>
+      <p class="text-center">Convert your budget into the currency of your travel destination. Enter the amount and select the currency to exchange.</p>
+
+      <!-- Currency Exchange Form -->
+      <form id="currency-form" class="text-center mb-4">
+          <div class="form-group">
+              <label for="amount">Amount</label>
+              <input type="number" class="form-control" id="amount" placeholder="Enter amount">
+          </div>
+          <div class="form-group mt-3">
+              <label for="from-currency">From Currency</label>
+              <select class="form-control" id="from-currency">
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="INR">INR</option>
+                  <option value="CAD">CAD</option>
+                  <!-- Add more currencies as needed -->
+              </select>
+          </div>
+          <div class="form-group mt-3">
+              <label for="to-currency">To Currency</label>
+              <select class="form-control" id="to-currency">
+                  <option value="INR">INR</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="CAD">CAD</option>
+                  <!-- Add more currencies as needed -->
+              </select>
+          </div>
+          <button type="submit" class="btn btn-primary mt-4 w-100">Convert</button>
+      </form>
+
+      <!-- Currency Exchange Result -->
+      <div id="currency-result" class="text-center">
+          <h3 id="exchange-amount" class="mb-3"></h3>
+          <p id="exchange-description"></p>
+      </div>
+  </div>
+</section>
+
+
+<br>
+
+<footer class="footer-section text-left text-lg-start">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+<div class="footer-brand">
+    <img src="logo.png" alt="Roamio Logo" class="footer-logo">
+</div>
+        <p class="text-dark">
+          Plan your dream trip with ease using our intuitive itinerary builder, budget calculator, and weather forecast tools.
+        </p>
+        
+        <!-- Newsletter Signup -->
+        <div class="newsletter-signup mt-4">
+          <h5 class="text-uppercase text-dark">Subscribe To Our Newsletter</h5>
+          <form>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+                <button class="btn btn-warning" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase text-dark">Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="index.html" style="text-decoration: none; color: #000;">Home</a></li>
+          <li><a href="wow.html" style="text-decoration: none; color: #000;">Search Destinations</a></li>
+          <li><a href="itinerary.html" style="text-decoration: none; color: #000;">Itinerary Builder</a></li>
+          <li><a href="budget.html" style="text-decoration: none; color: #000;">Budget</a></li>
+          <li><a href="weather.html" style="text-decoration: none; color: #000;">Weather</a></li>
+          <li><a href="testimonial.html" style="text-decoration: none; color: #000;">Reviews</a></li>
+          <li><a href="about.html" style="text-decoration: none; color: #000;">About</a></li>
+          <li><a href="contact.html" style="text-decoration: none; color: #000;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase text-dark">Follow Us</h5>
+        <ul class="list-inline social-links mb-0">
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Pinterest">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <br>
+  <div class="copyright text-center p-3">
+    © 2024 ROAMIO | By Utsav Jhakhariya
+  </div>
+</footer>
+
+
+  <!-- jQuery & Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Budget Calculator JavaScript -->
+  <script>
+    $(document).ready(function() {
+      $('#budget-form').on('submit', function(event) {
+        event.preventDefault();
+        
+        const accommodation = parseFloat($('#accommodation').val()) || 0;
+        const flights = parseFloat($('#flights').val()) || 0;
+        const food = parseFloat($('#food').val()) || 0;
+        const transportation = parseFloat($('#transportation').val()) || 0;
+        const activities = parseFloat($('#activities').val()) || 0;
+        const miscellaneous = parseFloat($('#miscellaneous').val()) || 0;
+
+        const totalBudget = accommodation + flights + food + transportation + activities + miscellaneous;
+
+        $('#total-budget').text(`$${totalBudget.toFixed(2)}`);
+      });
+
+      $('#currency-form').on('submit', function(event) {
+        event.preventDefault();
+        
+        const amount = parseFloat($('#amount').val());
+        const fromCurrency = $('#from-currency').val();
+        const toCurrency = $('#to-currency').val();
+
+        if (isNaN(amount) || amount <= 0) {
+            alert('Please enter a valid amount.');
+            return;
+        }
+        
+        const apiKey = 'YOUR_API_KEY'; // Replace with your API key
+        const url = `https://api.exchangerate-api.com/v4/latest/${fromCurrency}`;
+
+        $.getJSON(url, function(data) {
+            const exchangeRate = data.rates[toCurrency];
+            const exchangedAmount = (amount * exchangeRate).toFixed(2);
+
+            $('#exchange-amount').text(`${exchangedAmount} ${toCurrency}`);
+            $('#exchange-description').text(`Equivalent of ${amount} ${fromCurrency} in ${toCurrency}`);
+        }).fail(function() {
+            $('#exchange-amount').text('Error fetching exchange rate. Please try again.');
+            $('#exchange-description').text('');
+        });
+    });
+
+    });
+  </script>
+</body>
+</html>
