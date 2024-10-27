@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about us at Roamio - Our mission, story, and the values that drive us.">  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <link rel="icon" href="R.png" type="image/png">
+  <title>ROAMIO | Travel Planner</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* General Styling for a Glassy Look */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+    }
+
+
+
+
+
+
+
+
+
+
+    
+   /* Introduction Section Styling */
+.intro-section {
+  background: url('https://img.pikbest.com/wp/202346/travel-around-the-world-globetrotting-by-air-3d-illustration-of-traveling_9746818.jpg!sw800') center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  border-radius: 30px;
+  color: #fff;
+  position: relative;
+  padding: 20px;
+}
+
+/* Dark overlay effect for better text contrast */
+.intro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.429); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Content Centered */
+.intro-section .container {
+  position: relative;
+  z-index: 2; /* Ensure text is above overlay */
+  max-width: 700px;
+}
+
+/* Text Styling */
+.intro-section .section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.intro-section .lead {
+  font-size: 1.3rem;
+  color: #ff0000;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.intro-section .btn-primary {
+  background-color: #00a2ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+.intro-section .btn-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .intro-section .section-title {
+      font-size: 2.5rem;
+  }
+  .intro-section .lead {
+      font-size: 1rem;
+  }
+  .intro-section .btn-primary {
+      padding: 10px 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling for Mission and Vision Section */
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.lead {
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+/* Icons */
+.feature-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .text-md-start {
+        text-align: center !important;
+    }
+    .btn {
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling for Our Story Section */
+.section-bg {
+    background: #f9fafc;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+/* Feature Icon Styling */
+.feature-icon {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.icon-circle {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Highlight Box Styling */
+.highlight-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.shadow {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+/* Call to Action Hover Effect */
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .highlight-box {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling for What We Offer Section */
+.section-bg {
+    background: #f9fafc;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+/* Feature Icon Styling */
+.feature-icon {
+    font-size: 3rem;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.feature-icon:hover {
+    color: #000000;
+}
+
+/* Offer Card Styling */
+.offer-card {
+    background-color: #ffffff79;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.offer-card:hover {
+    transform: scale(1.01);
+}
+
+.offer-card h4 {
+    font-weight: bold;
+    color: #000000;
+}
+
+.offer-card p {
+    color: #555;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+/* Call to Action Hover Effect */
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .offer-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================================================================== Achievement Box Styling ==========================================================================================*/
+/* Achievements Section Styling */
+.achievements-section {
+  background: url('https://en.idei.club/uploads/posts/2023-06/thumbs/1687535169_en-idei-club-p-blur-gradient-dizain-10.jpg') no-repeat center center/cover; /* Change to your image URL */
+  height: 750px; /* Set the height of the section */
+  position: relative;
+  color: #000000; /* Ensure the text is visible against the background */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+
+
+/* Content Wrapper to adjust z-index */
+.achievements-section .container {
+  position: relative;
+  z-index: 2; /* Make sure the content is above the overlay */
+}
+
+/* Achievement Box Styling */
+.achievement-box {
+  background: rgba(255, 255, 255, 0.39); /* Light background with transparency */
+  border-radius: 20px;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.achievement-box:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust heading and text colors for contrast */
+.achievements-section h2 {
+  color: #000000;
+}
+
+.achievements-section p {
+  color: #000000;
+}
+
+
+/*=================================================================== Achievement Box Styling ==========================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icons */
+.feature-icon {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+/* Call to Action Hover Effect */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .achievement-box {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+/* General Styling for Why Choose Us Section */
+.section-bg .container{
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 40px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  color: #000000;
+}
+
+/* Blurry Glass Effect for the Feature Cards */
+.feature-box {
+  background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  border-radius: 25px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.2);
+}
+
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff; /* White color for better contrast */
+}
+
+/* Feature Icon Styling */
+.feature-icon {
+  font-size: 3rem;
+  color: #000000; /* White for icons */
+  transition: color 0.3s ease;
+}
+
+.feature-icon:hover {
+  color: #000000; /* Change color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .feature-box {
+      margin-bottom: 20px;
+  }
+  
+  .section-title {
+      font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+/* General Styling for Partnerships Section */
+.section-bg {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Lead Text */
+.lead {
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+/* Partner Logos */
+.partners-logo {
+    width: 150px; /* Fixed width for logos */
+    transition: transform 0.3s ease;
+}
+
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007bff;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .partners-logo {
+        width: 120px; /* Adjust width for smaller screens */
+    }
+}
+
+
+
+/*======================================================== Stylish Navbar ========================================================*/
+.custom-navbar {
+  background: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkwNC1udW5ueS0wMTIteC1qb2I1OTguanBn.jpg');
+  width: 80%; /* Smaller width for a sleek look */
+  margin: 20px auto;
+  border-radius: 60px;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000; /* Black text for the brand */
+  letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #000000; /* Black text for the links */
+  padding: 8px 15px;
+  border-radius: 25px; /* Slight rounding for each link */
+  transition: background-color 0.2s ease; /* Subtle transition */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #989898; /* Light grey background on hover */
+  color: #ffffff; /* Keep text black on hover */
+  text-decoration: none; /* No underline */
+  transform: translateY(-1px); /* Slight lift */
+}
+
+/* Active Page Styling */
+.nav-link.active {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for active link */
+  transform: none; /* No hover effect for active link */
+}
+
+/* Navbar Layout Adjustments */
+.navbar-nav .nav-item {
+  margin-left: 5px;
+}
+
+.navbar {
+  padding: 1rem 1.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+  .custom-navbar {
+    width: 90%; /* Wider on smaller screens for better readability */
+    border-radius: 0;
+    padding: 15px 20px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 7px 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem; /* Smaller brand text for mobile */
+  }
+}
+
+
+/* ================================================== Header and Navbar Styles ==================================================*/
+/* Stylish Navbar */
+.custom-navbar {
+  background: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkwNC1udW5ueS0wMTIteC1qb2I1OTguanBn.jpg');
+  background-size: cover;
+  width: 80%; /* Smaller width for a sleek look */
+  margin: 20px auto;
+  border-radius: 60px;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000; /* Black text for the brand */
+  letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #000000; /* Black text for the links */
+  padding: 8px 15px;
+  border-radius: 25px; /* Slight rounding for each link */
+  transition: background-color 0.2s ease; /* Subtle transition */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: transparent; /* Light grey background on hover */
+  color: #ffffff; /* Keep text black on hover */
+  text-decoration: none; /* No underline */
+  transform: translateY(-1px); /* Slight lift */
+}
+
+/* Active Page Styling */
+.nav-link.active {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for active link */
+  transform: none; /* No hover effect for active link */
+}
+
+/* Navbar Layout Adjustments */
+.navbar-nav .nav-item {
+  margin-left: 5px;
+}
+
+.navbar {
+  padding: 1rem 1.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+  .custom-navbar {
+    width: 90%; /* Wider on smaller screens for better readability */
+    border-radius: 0;
+    padding: 15px 20px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 7px 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem; /* Smaller brand text for mobile */
+  }
+}
+
+
+
+/* ================================================== Footer Styles ==================================================*/
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.footer-section {
+background: url('https://img.freepik.com/premium-vector/abstract-fluid-3d-effect-gradient-blur-background_322384-2457.jpg') no-repeat center center/cover;
+position: relative;
+color: #000000;
+}
+
+.footer-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.256); /* Semi-transparent white overlay */
+z-index: 1;
+}
+
+.footer-section .container {
+position: relative;
+z-index: 2; /* Ensures content is above the overlay */
+}
+
+footer h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffdd57;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #dcdcdc;
+} 
+
+.newsletter-signup p {
+font-size: 1rem;
+margin-bottom: 10px;
+color: #000000;
+font-weight: bold;
+}
+
+.newsletter-signup .form-control {
+border-radius: 30px;
+border: 2px solid #000000;
+}
+
+.newsletter-signup .input-group{
+max-width: 20rem;
+}
+
+.newsletter-signup .btn-warning {
+background-color: #080808;
+color: #fff;
+border: none;
+border-radius: 30px;
+}
+
+.newsletter-signup .btn-warning:hover {
+background-color: #010101;
+color: #fff;
+}
+
+
+.social-links {
+display: flex;
+justify-content: start;
+}
+
+.social-icon {
+display: inline-block;
+font-size: 1.5rem;
+color: #000;
+padding: 5px;
+border-radius: 50%;
+background-color: transparent;
+transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+color: #fff;
+transform: translateY(-5px);
+}
+
+.social-icon i {
+vertical-align: middle;
+}
+
+
+/* Add individual color effects for each social media on hover */
+.social-icon:hover i.fa-facebook-f {
+color: #3b5998;
+}
+
+.social-icon:hover i.fa-twitter {
+color: #1da1f2;
+}
+
+.social-icon:hover i.fa-instagram {
+color: #e1306c;
+}
+
+.social-icon:hover i.fa-linkedin-in {
+color: #0077b5;
+}
+
+.social-icon:hover i.fa-youtube {
+color: #ff0000;
+}
+
+.social-icon:hover i.fa-pinterest {
+color: #bd081c;
+}
+
+.copyright{
+color: #000;
+}
+
+/* ================================================== Footer Styles ==================================================*/
+
+
+.offersection{
+  background: url('https://browsecat.art/sites/default/files/dark-gradient-wallpapers-46403-1487340-8194321.png');
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Include Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Roamio Logo" class="brand-logo">
+    </a>
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wow.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="itinerary.html">Itinerary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="budget.html">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="weather.html">Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="testimonial.html">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Introduction/Company Overview -->
+<section class="intro-section d-flex align-items-center text-center text-white">
+  <div class="container">
+    <h1 class="section-title mb-4 text-white">👋 Welcome to Roamio</h1>
+    <p class="lead text-white">Your adventure begins here. At <strong>Roamio</strong>, we make travel planning easy, intuitive, and fun. Discover hidden gems, build unforgettable journeys, and let us guide you from dream to destination.</p>
+    <a href="wow.html" class="btn btn-primary btn-lg mt-4">Start Exploring</a>
+  </div>
+</section>
+
+  <!-- Floating Sticky Chat Button -->
+<a href="one.html" id="chat-button" title="Chat with us">
+  <i class="fas fa-comment text-white"></i>
+</a>
+<!-- Mission and Vision -->
+<section class="py-5 text-center text-md-start bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Mission Section -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="card shadow p-4 rounded">
+            <div class="card-body">
+              <h3 class="section-title">🚀 Our Mission</h3>
+              <p class="lead">To simplify travel planning and make exploring the world accessible for everyone. At Roamio, we believe that the joy of adventure should be paired with a stress-free planning process.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Vision Section -->
+        <div class="col-md-6">
+          <div class="card shadow p-4 rounded">
+            <div class="card-body">
+              <h3 class="section-title">👁️ Our Vision</h3>
+              <p class="lead">We envision a world where everyone can embark on their dream trips effortlessly. Roamio empowers people to explore new places, create lifelong memories, and experience adventure, all with just a few clicks.</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+<!-- Our Story with Interactive Features -->
+<section class="py-5 section-bg position-relative">
+    <div class="container">
+      <br><br>
+      <h2 class="section-title mb-4 text-center">📜 Our Story</h2>
+      <p class="lead text-center">Roamio started as a passion project between a group of friends who loved traveling but hated the tedious task of planning. After countless road trips and spontaneous adventures, we decided to create a tool that combined simplicity with functionality, helping people around the world plan their trips with ease.</p>
+      
+      <!-- Timeline with Icons -->
+      <div class="row text-center mt-5">
+        
+        <!-- First Milestone -->
+        <div class="col-md-4">
+          <div class="highlight-box p-4 rounded shadow hover-scale">
+            <div class="icon-circle mb-3">
+              <i class="fas fa-route feature-icon"></i>
+            </div>
+            <h4 class="mt-3">Our First Road Trip</h4>
+            <p>It all started with a map, a car, and the open road. This sparked the idea behind Roamio.  This sparked the idea behind Roamio. </p>
+          </div>
+        </div>
+        
+        <!-- Second Milestone -->
+        <div class="col-md-4">
+          <div class="highlight-box p-4 rounded shadow hover-scale">
+            <div class="icon-circle mb-3">
+              <i class="fas fa-map-signs feature-icon"></i>
+            </div>
+            <h4 class="mt-3">Crafting Our Platform</h4>
+            <p>We built Roamio with a vision to simplify the process of planning trips and create a seamless experience for every adventurer.</p>
+          </div>
+        </div>
+        
+        <!-- Third Milestone -->
+        <div class="col-md-4">
+          <div class="highlight-box p-4 rounded shadow hover-scale">
+            <div class="icon-circle mb-3">
+              <i class="fas fa-globe feature-icon"></i>
+            </div>
+            <h4 class="mt-3">Growing Globally</h4>
+            <p>Today, Roamio is trusted by users worldwide, helping people in over 50 countries plan their dream trips.</p>
+          </div>
+        </div>
+        
+      </div>
+  
+      <br><br>
+    </div>
+  </section>
+  
+<!-- What We Offer (Interactive Cards) -->
+<section class="py-5 offersection text-center">
+    <div class="container">
+      <br><br><br>
+      <h2 class="section-title mb-4">🌟 What We Offer</h2>
+      <p class="lead text-muted">Discover our exclusive services that make travel planning easier, smarter, and more enjoyable.</p>
+      
+      <div class="row mt-5">
+        <!-- Custom Itineraries -->
+        <div class="col-md-4 mb-4">
+          <div class="offer-card p-4 rounded shadow">
+            <i class="fas fa-map-marked-alt feature-icon mb-3"></i>
+            <h4>Custom Itineraries</h4>
+            <p class="lead">Plan your trip down to the finest details. Our itinerary builder helps you create a personalized journey that fits your schedule and interests.</p>
+          </div>
+        </div>
+        
+        <!-- Budget Calculator -->
+        <div class="col-md-4 mb-4">
+          <div class="offer-card p-4 rounded shadow">
+            <i class="fas fa-wallet feature-icon mb-3"></i>
+            <h4>Budget Calculator</h4>
+            <p class="lead">Keep your travel expenses under control with our easy-to-use budget calculator, designed to track your spending and provide smart recommendations.</p>
+          </div>
+        </div>
+        
+        <!-- Destination Explorer -->
+        <div class="col-md-4 mb-4">
+          <div class="offer-card p-4 rounded shadow">
+            <i class="fas fa-binoculars feature-icon mb-3"></i>
+            <h4>Destination Explorer</h4>
+            <p class="lead">Discover hidden gems and must-see destinations through our powerful search tool that helps you find the best places based on your preferences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+  </section>
+  
+<!-- Why Choose Us -->
+<section class="py-5 section-bg">
+  <div class="container">
+    <br><br><br><br>
+      <h2 class="section-title mb-4 text-center">🤝 Why Choose Us?</h2>
+      <p class="lead text-center mb-4">Discover the unique advantages that set Roamio apart from the rest. Here’s why we’re the best choice for your travel planning:</p>
+      
+      <div class="row">
+          <!-- Tailored Experiences -->
+          <div class="col-md-3 mb-4">
+              <div class="feature-box p-4 rounded shadow hover-scale">
+                  <i class="fas fa-globe feature-icon mb-3"></i>
+                  <h4>🌍 Tailored Experiences</h4>
+                  <p>We help you create trips that are uniquely yours, perfectly matching your preferences and desires.</p>
+              </div>
+          </div>
+          
+          <!-- User-Friendly Interface -->
+          <div class="col-md-3 mb-4">
+              <div class="feature-box p-4 rounded shadow hover-scale">
+                  <i class="fas fa-laptop feature-icon mb-3"></i>
+                  <h4>💡 User-Friendly Interface</h4>
+                  <p>Our platform is designed with simplicity and ease-of-use in mind, ensuring a smooth planning experience.</p>
+              </div>
+          </div>
+          
+          <!-- All-in-One Solution -->
+          <div class="col-md-3 mb-4">
+              <div class="feature-box p-4 rounded shadow hover-scale">
+                  <i class="fas fa-clipboard-list feature-icon mb-3"></i>
+                  <h4>💼 All-in-One Solution</h4>
+                  <p>Itineraries, budgets, weather forecasts – everything you need is consolidated in one convenient platform.</p>
+              </div>
+          </div>
+          
+          <!-- 24/7 Support -->
+          <div class="col-md-3 mb-4">
+              <div class="feature-box p-4 rounded shadow hover-scale">
+                  <i class="fas fa-headset feature-icon mb-3"></i>
+                  <h4>🚀 24/7 Support</h4>
+                  <p>We’re here to assist you anytime, anywhere on your travel journey, ready to help whenever you need it.</p>
+              </div>
+          </div>
+      </div>
+      <br><br><br><br>
+  </div>
+</section>
+
+  
+
+<!-- Achievements/Milestones -->
+<section class="achievements-section py-5 text-center">
+  <div class="container">
+    <h2 class="section-title mb-4 text-black">🏆 Our Achievements</h2>
+    <p class="lead text-muted mb-5">We take pride in our journey and the milestones we've reached along the way. Here's what we’ve accomplished together!</p>
+    <div class="row">
+      
+      <!-- Achievement 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="achievement-box p-4 rounded shadow hover-scale">
+          <i class="fas fa-globe feature-icon mb-3"></i>
+          <h4>1M+ Trips Planned</h4>
+          <p>Since our launch, we've helped travelers plan over 1 million trips to various corners of the world.</p>
+        </div>
+      </div>
+      
+      <!-- Achievement 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="achievement-box p-4 rounded shadow hover-scale">
+          <i class="fas fa-users feature-icon mb-3"></i>
+          <h4>500K+ Users</h4>
+          <p>Our community continues to grow with over 500,000 active users sharing their adventures and feedback.</p>
+        </div>
+      </div>
+      
+      <!-- Achievement 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="achievement-box p-4 rounded shadow hover-scale">
+          <i class="fas fa-map-marked-alt feature-icon mb-3"></i>
+          <h4>Global Reach</h4>
+          <p>We've expanded our reach to 50+ countries, bringing Roamio to adventurers all over the globe.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  
+
+<!-- Partnerships and Collaborations -->
+<section class="py-5 section-bg text-center">
+    <div class="container">
+      <br><br>
+      <h2 class="section-title mb-4">🤝 Partnerships and Collaborations</h2>
+      <p class="lead mb-4">We’ve partnered with renowned travel agencies, hotels, and tour operators to offer you exclusive deals and seamless trip planning.</p>
+  
+      <!-- Carousel for Partner Logos -->
+      <div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <img src="https://nydlfc.com/wp-content/uploads/2020/12/new-york-skyline.jpg" alt="Partner 1" class="partners-logo mx-2">
+              <img src="https://images.goway.com/production/featured_images/japan_tokyo_akihabara_AdobeStock_295310062_Editorial_Use_Only.jpg" alt="Partner 2" class="partners-logo mx-2">
+              <img src="https://i0.wp.com/wheelchairtravel.org/wp-content/uploads/2020/01/paris-v2020-header.jpg?resize=1920%2C1024&ssl=1" alt="Partner 3" class="partners-logo mx-2">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img src="https://babylontours.com/wp-content/uploads/2016/09/london-441853_960_720.jpg" alt="Partner 4" class="partners-logo mx-2">
+              <img src="https://cdn.britannica.com/35/100235-050-CE3936EE/view-CN-Tower-Toronto-skyline-observation-deck.jpg" alt="Partner 5" class="partners-logo mx-2">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF2IEEAAqjd9xdaKWJiRtArk-ARvRK9iLPJQ&s" alt="Partner 6" class="partners-logo mx-2">
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#partnersCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#partnersCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <br><br>
+    </div>
+  </section>
+  
+
+  <footer class="footer-section text-left text-lg-start">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+<div class="footer-brand">
+    <img src="logo.png" alt="Roamio Logo" class="footer-logo">
+</div>
+
+          <p class="text-dark">
+            Plan your dream trip with ease using our intuitive itinerary builder, budget calculator, and weather forecast tools.
+          </p>
+          
+          <!-- Newsletter Signup -->
+          <div class="newsletter-signup mt-4">
+            <h5 class="text-uppercase text-dark">Subscribe To Our Newsletter</h5>
+            <form>
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+                  <button class="btn btn-warning" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-dark">Links</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html" style="text-decoration: none; color: #000;">Home</a></li>
+            <li><a href="wow.html" style="text-decoration: none; color: #000;">Search Destinations</a></li>
+            <li><a href="itinerary.html" style="text-decoration: none; color: #000;">Itinerary Builder</a></li>
+            <li><a href="budget.html" style="text-decoration: none; color: #000;">Budget</a></li>
+            <li><a href="weather.html" style="text-decoration: none; color: #000;">Weather</a></li>
+            <li><a href="testimonial.html" style="text-decoration: none; color: #000;">Reviews</a></li>
+            <li><a href="about.html" style="text-decoration: none; color: #000;">About</a></li>
+            <li><a href="contact.html" style="text-decoration: none; color: #000;">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase text-dark">Follow Us</h5>
+          <ul class="list-inline social-links mb-0">
+            <li class="list-inline-item">
+              <a href="#!" class="social-icon" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#!" class="social-icon" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#!" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#!" class="social-icon" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#!" class="social-icon" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#!" class="social-icon" aria-label="Pinterest">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        
+      </div>
+    </div>
+    <br>
+    <div class="copyright text-center p-3">
+      © 2024 ROAMIO | By Utsav Jhakhariya
+    </div>
+  </footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
