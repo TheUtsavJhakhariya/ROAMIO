@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get real-time weather forecasts for your travel destinations.">
+  <meta name="keywords" content="weather, travel forecast, destination weather">
+  <meta name="author" content="Utsav Jhakhariya">  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="R.png" type="image/png">
+  <title>ROAMIO | Travel Planner</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- Include Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Roamio Logo" class="brand-logo">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wow.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="itinerary.html">Itinerary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="budget.html">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="weather.html">Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="testimonial.html">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Floating Sticky Chat Button -->
+<a href="one.html" id="chat-button" title="Chat with us">
+  <i class="fas fa-comment text-white"></i>
+</a>
+
+<section class="weather-section py-5">
+  <div class="container weather-container">
+    <br>
+    <h2 class="text-center mb-4">🌤️ Weather Forecast</h2>
+    <p class="lead text-center">Check the weather at your destination and plan your journey with confidence.</p>
+
+    <!-- Weather Form -->
+    <form id="weather-form" class="text-center mb-4">
+      <div class="form-group mb-3">
+        <label for="location" class="form-label">Enter Location</label>
+        <input type="text" class="form-control" id="location" placeholder="Enter city or destination">
+      </div>
+      <button type="submit" class="weatherbtn">Get Weather</button>
+    </form>
+
+    <!-- Weather Display -->
+    <div id="weather-display" class="text-center weather-info mt-5">
+      <h3 id="city-name" class="mb-2"></h3>
+      <p id="weather-description" class="mb-1"></p>
+      <p id="temperature" class="temperature-display"></p>
+    </div>
+    <br>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="pre-planned-trips py-5">
+  <div class="container">
+    <br><br>
+    <h1 class="text-center mb-4">🧳 Pre-planned Trips</h1>
+    <p class="text-center text-muted">Discover our handpicked travel packages, designed for unforgettable adventures tailored just for you. Pack your bags, we've got the rest covered!</p>
+    
+    <div class="row text-center">
+      <!-- Trip 1 -->
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-lg">
+          <div class="card-img-wrapper">
+            <img src="https://cdn.outsideonline.com/wp-content/uploads/2023/11/sea-kayaking-tropical-adventures_h.jpg" class="card-img-top" alt="Tropical Adventure">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">5 Days, 6 Nights - Tropical Adventure</h5>
+            <p class="card-text">$1200 per person</p>
+            <button class="preplanbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#trip1Details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trip 2 -->
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-lg">
+          <div class="card-img-wrapper">
+            <img src="https://www.zicasso.com/static/e9965f8ecdbab30f9f882eeb67363e08/304cc/e9965f8ecdbab30f9f882eeb67363e08.jpg" class="card-img-top" alt="European Highlights">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">10 Days, 9 Nights - European Highlights</h5>
+            <p class="card-text">$3500 per person</p>
+            <button class="preplanbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#trip2Details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trip 3 -->
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-lg">
+          <div class="card-img-wrapper">
+            <img src="https://cdn-images.go2africa.com/wp-content/uploads/2020/03/04141325/lion_madikwe_go2africa.jpg" class="card-img-top" alt="African Safari">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">7 Days, 6 Nights - African Safari</h5>
+            <p class="card-text">$2800 per person</p>
+            <button class="preplanbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#trip3Details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trip 4 -->
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-lg">
+          <div class="card-img-wrapper">
+            <img src="https://i.natgeofe.com/n/63527567-9a8b-4b08-819d-a6142fb2b350/aurora-kirkjufell-iceland.jpg?w=826&h=550" class="card-img-top" alt="Northern Lights Adventure">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">6 Days, 5 Nights - Northern Lights Adventure</h5>
+            <p class="card-text">$2100 per person</p>
+            <button class="preplanbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#trip4Details">View Details</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br><br>
+
+  <!-- Offcanvas for Trip 1 -->
+  <div class="offcanvas offcanvas-end glass-offcanvas" tabindex="-1" id="trip1Details" aria-labelledby="trip1DetailsLabel">
+    <div class="offcanvas-header">
+      <h3 id="trip1DetailsLabel">Tropical Adventure - 5 Days, 6 Nights</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <img src="https://cdn.outsideonline.com/wp-content/uploads/2023/11/sea-kayaking-tropical-adventures_h.jpg" class="img-fluid mb-4" alt="Tropical Adventure">
+      <p>Explore the beautiful tropical islands with our exclusive package, including accommodation, meals, and guided tours. Activities include snorkeling, island hopping, and more.</p>
+      <ul>
+        <li><i class="fas fa-bed"></i> Accommodation: Beachside Resort</li>
+        <li><i class="fas fa-utensils"></i> All-inclusive Meals</li>
+        <li><i class="fas fa-water"></i> Activities: Snorkeling, Island Hopping</li>
+      </ul>
+      <div class="d-flex justify-content-between mt-4">
+        <button class="book me-2 flex-grow-1">Book Now</button>
+        <button class="share flex-grow-1">Share This Trip</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas for Trip 2 -->
+  <div class="offcanvas offcanvas-end glass-offcanvas" tabindex="-1" id="trip2Details" aria-labelledby="trip2DetailsLabel">
+    <div class="offcanvas-header">
+      <h3 id="trip2DetailsLabel">European Highlights - 10 Days, 9 Nights</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <img src="https://www.zicasso.com/static/e9965f8ecdbab30f9f882eeb67363e08/304cc/e9965f8ecdbab30f9f882eeb67363e08.jpg" class="img-fluid mb-4" alt="European Highlights">
+      <p>Embark on a European journey through famous cities like Paris, Rome, and Amsterdam. Guided tours, world-class cuisine, and cultural sites await you!</p>
+      <ul>
+        <li><i class="fas fa-bed"></i> Accommodation: 4-Star Hotels</li>
+        <li><i class="fas fa-utensils"></i> Meals: Breakfast & Dinner</li>
+        <li><i class="fas fa-landmark"></i> Tours: City Highlights & Landmarks</li>
+      </ul>
+      <div class="d-flex justify-content-between mt-4">
+        <button class="book me-2 flex-grow-1">Book Now</button>
+        <button class="share flex-grow-1">Share This Trip</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas for Trip 3 -->
+  <div class="offcanvas offcanvas-end glass-offcanvas" tabindex="-1" id="trip3Details" aria-labelledby="trip3DetailsLabel">
+    <div class="offcanvas-header">
+      <h3 id="trip3DetailsLabel">African Safari - 7 Days, 6 Nights</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <img src="https://cdn-images.go2africa.com/wp-content/uploads/2020/03/04141325/lion_madikwe_go2africa.jpg" class="img-fluid mb-4" alt="African Safari">
+      <p>Experience the wild beauty of Africa with thrilling safari adventures, close encounters with wildlife, and stunning landscapes.</p>
+      <ul>
+        <li><i class="fas fa-campground"></i> Accommodation: Luxury Tents</li>
+        <li><i class="fas fa-utensils"></i> Meals: All-inclusive</li>
+        <li><i class="fas fa-binoculars"></i> Activities: Game Drives, Nature Walks</li>
+      </ul>
+      <div class="d-flex justify-content-between mt-4">
+        <button class="book me-2 flex-grow-1">Book Now</button>
+        <button class="share flex-grow-1">Share This Trip</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas for Trip 4 -->
+  <div class="offcanvas offcanvas-end glass-offcanvas" tabindex="-1" id="trip4Details" aria-labelledby="trip4DetailsLabel">
+    <div class="offcanvas-header">
+      <h3 id="trip4DetailsLabel">Northern Lights Adventure - 6 Days, 5 Nights</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <img src="https://i.natgeofe.com/n/63527567-9a8b-4b08-819d-a6142fb2b350/aurora-kirkjufell-iceland.jpg?w=826&h=550" class="img-fluid mb-4" alt="Northern Lights Adventure">
+      <p>Witness the enchanting Northern Lights with this Arctic adventure, including snow activities and cozy stays.</p>
+      <ul>
+        <li><i class="fas fa-igloo"></i> Accommodation: Ice Hotels</li>
+        <li><i class="fas fa-utensils"></i> Meals: Breakfast & Dinner</li>
+        <li><i class="fas fa-snowflake"></i> Activities: Aurora Viewing, Snowmobiling</li>
+      </ul>
+      <div class="d-flex justify-content-between mt-4">
+        <button class="book me-2 flex-grow-1">Book Now</button>
+        <button class="share flex-grow-1">Share This Trip</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+  <section class="pricing-section py-5">
+    <div class="container">
+      <h1 class="text-center mb-4">💸 Our Pricing Plans</h1>
+      <p class="text-center">Choose the plan that fits your travel needs and budget. Simple, transparent pricing for every type of traveler.</p>
+
+      <div class="row text-center">
+        <!-- Basic Plan -->
+        <div class="col-md-6">
+          <div class="card pricing-card mb-4 shadow-sm">
+            <div class="blur-container">
+              <h4 class="fw-normal">Basic Plan</h4>
+              <h1 class="pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4 text-start">
+                <li><i class="fas fa-check text-success"></i> 3 destination searches per day</li>
+                <li><i class="fas fa-check text-success"></i> Access to current weather data</li>
+                <li><i class="fas fa-times text-danger"></i> No access to historical weather data</li>
+                <li><i class="fas fa-times text-danger"></i> No access to weather forecasts longer than 7 days</li>
+                <li><i class="fas fa-times text-danger"></i> Limited customer support</li>
+                <li><i class="fas fa-times text-danger"></i> No weather alerts or notifications</li>
+              </ul>
+              <button type="button" class="basicpricebtn">Sign Up for Free</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pro Plan -->
+        <div class="col-md-6">
+          <div class="card pricing-card mb-4 shadow-sm">
+            <div class="blur-container">
+              <h4 class="fw-normal">Pro Plan</h4>
+              <h1 class="pricing-card-title">$10 <small class="text-muted">/ mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4 text-start">
+                <li><i class="fas fa-check text-success"></i> Unlimited destination searches</li>
+                <li><i class="fas fa-check text-success"></i> Access to current and historical weather data</li>
+                <li><i class="fas fa-check text-success"></i> 14-day weather forecast</li>
+                <li><i class="fas fa-check text-success"></i> Priority customer support</li>
+                <li><i class="fas fa-check text-success"></i> Weather alerts and notifications</li>
+                <li><i class="fas fa-times text-danger"></i> No personalized travel suggestions</li>
+              </ul>
+              <button type="button" class="propricebtn">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<footer class="footer-section text-left text-lg-start">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+<div class="footer-brand">
+    <img src="logo.png" alt="Roamio Logo" class="footer-logo">
+</div>
+        <p class="text-dark">
+          Plan your dream trip with ease using our intuitive itinerary builder, budget calculator, and weather forecast tools.
+        </p>
+        
+        <!-- Newsletter Signup -->
+        <div class="newsletter-signup mt-4">
+          <h5 class="text-uppercase text-dark">Subscribe To Our Newsletter</h5>
+          <form>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+                <button class="btn btn-warning" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase text-dark">Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="index.html" style="text-decoration: none; color: #000;">Home</a></li>
+          <li><a href="wow.html" style="text-decoration: none; color: #000;">Search Destinations</a></li>
+          <li><a href="itinerary.html" style="text-decoration: none; color: #000;">Itinerary Builder</a></li>
+          <li><a href="budget.html" style="text-decoration: none; color: #000;">Budget</a></li>
+          <li><a href="weather.html" style="text-decoration: none; color: #000;">Weather</a></li>
+          <li><a href="testimonial.html" style="text-decoration: none; color: #000;">Reviews</a></li>
+          <li><a href="about.html" style="text-decoration: none; color: #000;">About</a></li>
+          <li><a href="contact.html" style="text-decoration: none; color: #000;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase text-dark">Follow Us</h5>
+        <ul class="list-inline social-links mb-0">
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Pinterest">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <br>
+  <div class="copyright text-center p-3">
+    © 2024 ROAMIO | By Utsav Jhakhariya
+  </div>
+</footer>
+
+
+  <!-- jQuery & Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Weather Forecast JavaScript -->
+  <script>
+    $(document).ready(function() {
+      $('#weather-form').on('submit', function(event) {
+        event.preventDefault();
+        
+        const location = $('#location').val();
+        
+        if (location) {
+          // API Call to get weather data (replace 'YOUR_API_KEY' with actual key)
+          const apiKey = 'YOUR_API_KEY';
+          const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+
+          $.getJSON(url, function(data) {
+            const cityName = data.name;
+            const weatherDescription = data.weather[0].description;
+            const temperature = data.main.temp;
+
+            $('#city-name').text(cityName);
+            $('#weather-description').text(weatherDescription);
+            $('#temperature').text(`Temperature: ${temperature} °C`);
+          }).fail(function() {
+            $('#city-name').text('Location not found.');
+            $('#weather-description').text('');
+            $('#temperature').text('');
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
