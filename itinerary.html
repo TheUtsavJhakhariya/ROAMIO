@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="R.png" type="image/png">
+    <link rel="icon" href="R.png" type="image/png">
+    <title>ROAMIO | Travel Planner</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <style>
+        body {
+            font-family: 'Poppins';
+            background-color: #ffffff;
+        }
+        
+        h2 {
+            color: #000000;
+        }
+        
+        /* Styling the date picker container to be more compact */
+        .date-picker-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fancy-image {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fancy-button, .donwloadpdfbtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+
+        .fancy-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .activity-section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .activity {
+            background-color: #6c757d;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .activity:hover {
+            background-color: #5a6268;
+        }
+        
+        .dropzone {
+            height: 60px;
+            background-color: #ffffff;
+            vertical-align: middle;
+            position: relative;
+        }
+        
+        .dropzone.highlight {
+            background-color: #cfe2ff;
+        }
+        
+        .dropzone.activity-dropped {
+            background-color: #b9dfba;
+            color: #fff;
+        }
+        
+        .carousel-control-prev, .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #007bff;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            z-index: 1;
+            font-size: 14px;
+        }
+        
+        .carousel-control-prev {
+            left: -50px;
+        }
+        
+        .carousel-control-next {
+            right: -50px;
+        }
+        
+        .subtle-button {
+            background: transparent;
+            color: #007bff;
+            border: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            text-decoration: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        
+        .carousel-control-prev.subtle-button {
+            left: -150px;
+        }
+        
+        .carousel-control-next.subtle-button {
+            right: -120px;
+        }
+        
+        .subtle-button:hover {
+            color: #000;
+            text-decoration: none;
+        }
+        /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* ================================================== Header and Navbar Styles ==================================================*/
+/* Stylish Navbar */
+.custom-navbar {
+  background: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkwNC1udW5ueS0wMTIteC1qb2I1OTguanBn.jpg');
+  width: 80%; /* Smaller width for a sleek look */
+  margin: 20px auto;
+  border-radius: 60px;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Navbar brand logo styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 50px;  /* Adjust this height based on your design */
+  width: auto;
+  max-height: 50px;  /* Ensures logo is constrained within navbar height */
+  transition: transform 0.3s ease; /* Adds a smooth transition */
+}
+
+/* Hover effect for a slight scale-up */
+.navbar-brand:hover .brand-logo {
+  transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brand-logo {
+      height: 40px;  /* Reduce logo size on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-logo {
+      height: 35px; /* Smaller size for very small devices */
+  }
+}
+
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #000000; /* Black text for the links */
+  padding: 8px 15px;
+  border-radius: 25px; /* Slight rounding for each link */
+  transition: background-color 0.2s ease; /* Subtle transition */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #989898; /* Light grey background on hover */
+  color: #ffffff; /* Keep text black on hover */
+  text-decoration: none; /* No underline */
+  transform: translateY(-1px); /* Slight lift */
+}
+
+/* Active Page Styling */
+.nav-link.active {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for active link */
+  transform: none; /* No hover effect for active link */
+}
+
+/* Navbar Layout Adjustments */
+.navbar-nav .nav-item {
+  margin-left: 5px;
+}
+
+.navbar {
+  padding: 1rem 1.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+  .custom-navbar {
+    width: 90%; /* Wider on smaller screens for better readability */
+    border-radius: 0;
+    padding: 15px 20px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 7px 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem; /* Smaller brand text for mobile */
+  }
+}
+
+
+/* ================================================== Header and Navbar Styles ==================================================*/
+
+
+
+/* Button Styles */
+button {
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0069d9;
+    transform: translateY(-3px);
+}
+
+/* Section Headings */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Day Section Styles */
+.day-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.day-section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.droppable {
+    background-color: #eef2f7;
+    border: 2px dashed #007bff;
+}
+
+.draggable {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.draggable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Suggested Activities */
+.activity-box {
+    background-color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.activity-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* ================================================== Header and Navbar Styles ==================================================*/
+/* Stylish Navbar */
+.custom-navbar {
+  background: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkwNC1udW5ueS0wMTIteC1qb2I1OTguanBn.jpg');
+  background-size: cover;
+  width: 80%; /* Smaller width for a sleek look */
+  margin: 20px auto;
+  border-radius: 60px;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000000; /* Black text for the brand */
+  letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #000000; /* Black text for the links */
+  padding: 8px 15px;
+  border-radius: 25px; /* Slight rounding for each link */
+  transition: background-color 0.2s ease; /* Subtle transition */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: transparent; /* Light grey background on hover */
+  color: #ffffff; /* Keep text black on hover */
+  text-decoration: none; /* No underline */
+  transform: translateY(-1px); /* Slight lift */
+}
+
+/* Active Page Styling */
+.nav-link.active {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for active link */
+  transform: none; /* No hover effect for active link */
+}
+
+/* Navbar Layout Adjustments */
+.navbar-nav .nav-item {
+  margin-left: 5px;
+}
+
+.navbar {
+  padding: 1rem 1.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+  .custom-navbar {
+    width: 90%; /* Wider on smaller screens for better readability */
+    border-radius: 0;
+    padding: 15px 20px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 7px 10px;
+  }
+
+}
+
+
+
+/* ================================================== Footer Styles ==================================================*/
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.footer-section {
+background: url('https://img.freepik.com/premium-vector/abstract-fluid-3d-effect-gradient-blur-background_322384-2457.jpg') no-repeat center center/cover;
+position: relative;
+color: #000000;
+}
+
+.footer-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.256); /* Semi-transparent white overlay */
+z-index: 1;
+}
+
+.footer-section .container {
+position: relative;
+z-index: 2; /* Ensures content is above the overlay */
+}
+
+footer h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffdd57;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #dcdcdc;
+} 
+
+.newsletter-signup p {
+font-size: 1rem;
+margin-bottom: 10px;
+color: #000000;
+font-weight: bold;
+}
+
+.newsletter-signup .form-control {
+border-radius: 30px;
+border: 2px solid #000000;
+}
+
+.newsletter-signup .input-group{
+max-width: 20rem;
+}
+
+.newsletter-signup .btn-warning {
+background-color: #080808;
+color: #fff;
+border: none;
+border-radius: 30px;
+}
+
+.newsletter-signup .btn-warning:hover {
+background-color: #010101;
+color: #fff;
+}
+
+
+.social-links {
+display: flex;
+justify-content: start;
+}
+
+.social-icon {
+display: inline-block;
+font-size: 1.5rem;
+color: #000;
+padding: 5px;
+border-radius: 50%;
+background-color: transparent;
+transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+color: #fff;
+transform: translateY(-5px);
+}
+
+.social-icon i {
+vertical-align: middle;
+}
+
+
+/* Add individual color effects for each social media on hover */
+.social-icon:hover i.fa-facebook-f {
+color: #3b5998;
+}
+
+.social-icon:hover i.fa-twitter {
+color: #1da1f2;
+}
+
+.social-icon:hover i.fa-instagram {
+color: #e1306c;
+}
+
+.social-icon:hover i.fa-linkedin-in {
+color: #0077b5;
+}
+
+.social-icon:hover i.fa-youtube {
+color: #ff0000;
+}
+
+.social-icon:hover i.fa-pinterest {
+color: #bd081c;
+}
+
+.copyright{
+color: #000;
+}
+
+/* ================================================== Footer Styles ==================================================*/
+
+
+.card-container {
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.card-body p {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles for Timetable Section */
+.timetable-section {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.activities-section,
+.date-picker-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+}
+
+p {
+  color: #000000;
+}
+
+/* Input and Button Styling */
+.input-group-text {
+  background-color: #4c4c4c;
+  color: white;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-weight: 600;
+}
+
+input[type="date"], 
+input[type="text"] {
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.btn-lg {
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+}
+
+/* Activity Section */
+.activity-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.activity-section h5 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Carousel Styling */
+.carousel.slide {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Must-Do Activities and Local Food Section */
+.activities-section,
+#mustTryFood {
+  margin-top: 40px;
+}
+
+.activities-section p,
+#mustTryFood p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Download Button */
+#downloadPDF {
+  padding: 12px 40px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+        
+
+
+
+
+
+
+
+
+.card img {
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+  margin: 5%;
+  background-color: cover;
+  transition: transform 0.3s ease;
+}
+.card:hover img {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+/* Footer brand logo styling */
+.footer-brand {
+  display: flex;
+  justify-content: left;  /* Centers the logo horizontally */
+  align-items: left;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.footer-logo {
+  height: 60px;  /* Adjust based on the footer design */
+  width: auto;
+  max-height: 60px;
+  opacity: 0.8;  /* Slightly dimmed for a subtle effect */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for a slight brightness */
+.footer-logo:hover {
+  opacity: 1;  /* Restores full opacity on hover */
+  transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-logo {
+      height: 55px; /* Smaller size for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-logo {
+      height: 50px; /* Smallest size for mobile screens */
+  }
+}
+
+
+#chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00000087;
+  backdrop-filter: blur(5px);
+  color: white;
+  border-radius: 30%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+#chat-button:hover {
+background-color: #000000d4;
+}
+
+#chat-button i {
+  pointer-events: none;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- Include Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Roamio Logo" class="brand-logo">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wow.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="itinerary.html">Itinerary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="budget.html">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="weather.html">Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="testimonial.html">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Floating Sticky Chat Button -->
+<a href="one.html" id="chat-button" title="Chat with us">
+  <i class="fas fa-comment text-white"></i>
+</a>
+<br>
+<br>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">📅 Create Your Own Timetable</h2>
+        <p class="text-center">Design a personalized schedule that fits your unique travel style and preferences!</p>
+
+        <br>
+
+        <!-- Search City and Date Picker Section -->
+        <div class="container">
+            <div class="row align-items-center justify-content-center mb-4">
+                <!-- Left side - Image -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://global-goose.com/wp-content/uploads/2016/04/costarica.jpg" class="img-fluid fancy-image" alt="Travel Image">
+                </div>
+
+                <!-- Right side - Search and Date Selection -->
+                <div class="col-md-6">
+                    <div class="search-picker-container">
+                        <!-- Search input for city -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Search City</span>
+                            <input type="text" class="form-control" id="citySearch" placeholder="Search for a destination">
+                        </div>
+
+                        <!-- Date Picker Section -->
+                        <div class="date-picker-container">
+                            <div class="input-group date-picker mb-3">
+                                <span class="input-group-text">Start Date</span>
+                                <input type="date" class="form-control" id="startDate">
+                            </div>
+                            <div class="input-group date-picker mb-3">
+                                <span class="input-group-text">End Date</span>
+                                <input type="date" class="form-control" id="endDate">
+                            </div>
+                            <div class="text-center">
+                                <button class="fancy-button" id="confirmDates">Confirm Destination and Dates</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br><br>
+        <!-- Activities You Must Do Section -->
+<div class="container mt-5">
+    <h3 class="text-center">🎯 Must-Do Activities</h3>
+    <p class="text-center">Your trip wouldn’t be complete without experiencing the best activities your destination has to offer. Here are five exciting activities you must try!</p>
+    <div class="row" id="mustDoActivities">
+        <!-- Activities will be dynamically added here -->
+    </div>
+</div>
+
+<br><br>
+
+        <!-- Activities Section -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="card p-3 activity-section">
+                    <h5>Drag and Drop Activities</h5>
+                    <div class="d-flex flex-wrap" id="activities">
+                        <!-- Activities will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timetable Carousel and Buttons -->
+        <div id="dayCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="timetableCarousel"></div>
+            
+        </div>
+<br><br><br>
+        
+
+<!-- Food You Must Try Section -->
+<div class="container mt-5">
+    <h3 class="text-center">😋 Local Foods You Must Try</h3>
+    <p class="text-center">Discover the unique flavors of your destination by indulging in the local cuisine. Here's a list of must-try dishes that will make your culinary experience unforgettable!</p>
+    <div class="row" id="mustTryFood">
+        <!-- Food will be dynamically added here -->
+    </div>
+</div><br><br>
+
+        <!-- Download Section -->
+        <div class="text-center mt-5">
+            <h2>📋 Your Trip Itinerary</h2>
+<p>Plan the perfect adventure with your handpicked activities. Once everything is set, save your itinerary and relive the journey with just a click!</p>
+
+            <button class="donwloadpdfbtn" id="downloadPDF">Download Itinerary as PDF</button>
+        </div>
+    </div>
+    <br><br><br><br>
+    
+    
+    <footer class="footer-section text-left text-lg-start">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <div class="footer-brand">
+              <img src="logo.png" alt="Roamio Logo" class="footer-logo">
+          </div>
+          
+            <p class="text-dark">
+              Plan your dream trip with ease using our intuitive itinerary builder, budget calculator, and weather forecast tools.
+            </p>
+            
+            <!-- Newsletter Signup -->
+            <div class="newsletter-signup mt-4">
+              <h5 class="text-uppercase text-dark">Subscribe To Our Newsletter</h5>
+              <form>
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Enter your email" required>
+                    <button class="btn btn-warning" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase text-dark">Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li><a href="index.html" style="text-decoration: none; color: #000;">Home</a></li>
+              <li><a href="wow.html" style="text-decoration: none; color: #000;">Search Destinations</a></li>
+              <li><a href="itinerary.html" style="text-decoration: none; color: #000;">Itinerary Builder</a></li>
+              <li><a href="budget.html" style="text-decoration: none; color: #000;">Budget</a></li>
+              <li><a href="weather.html" style="text-decoration: none; color: #000;">Weather</a></li>
+              <li><a href="testimonial.html" style="text-decoration: none; color: #000;">Reviews</a></li>
+              <li><a href="about.html" style="text-decoration: none; color: #000;">About</a></li>
+              <li><a href="contact.html" style="text-decoration: none; color: #000;">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase text-dark">Follow Us</h5>
+            <ul class="list-inline social-links mb-0">
+              <li class="list-inline-item">
+                <a href="#!" class="social-icon" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!" class="social-icon" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!" class="social-icon" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!" class="social-icon" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!" class="social-icon" aria-label="YouTube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!" class="social-icon" aria-label="Pinterest">
+                  <i class="fab fa-pinterest"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          
+        </div>
+      </div>
+      <br>
+      <div class="copyright text-center p-3">
+        © 2024 ROAMIO | By Utsav Jhakhariya
+      </div>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        // Sample JSON data
+    // Sample JSON data
+    const cities = [
+    {
+      city: "Toronto",
+      country: "Canada",
+      destination_image: "https://miro.medium.com/v2/resize:fit:1400/1*7Bmh6rmBJDSYypb87cUJ7w.jpeg",
+      brief_description: "Toronto is the <b>largest city</b> in Canada and serves as a major <b>economic hub</b> for the country. It is renowned for its iconic <b>skyscrapers</b>, including the famous <b>CN Tower</b>, which offers breathtaking views of the skyline. The city boasts a vibrant <b>cultural scene</b> that celebrates diversity through various festivals, art galleries, and museums. Toronto's neighborhoods, such as <b>Chinatown</b>, <b>Little Italy</b>, and <b>Kensington Market</b>, each provide a unique atmosphere and culinary delights from around the world. With numerous parks and waterfront spaces, Toronto also offers residents and visitors alike a chance to enjoy nature within the urban landscape. Whether you're interested in <b>shopping</b>, dining, or exploring, Toronto has something for everyone.",
+      key_information: {
+        Top_Attractions: [
+          { name: "CN Tower", image: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_640,q_65,w_640/v1/clients/toronto/cn_tower_toronto_276bdc20-b872-4384-ad01-f68bb28d6c2d.jpg" },
+          { name: "Royal Ontario Museum", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/d1/cc/b1/canada-s-most-visited.jpg?w=1200&h=1200&s=1" },
+          { name: "Toronto Islands", image: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_640,q_65,w_640/v1/clients/toronto/A042_C012_20200920_R00222_c86fa59d-427b-479a-91e2-5dd6ac4c8a4d.jpg" },
+          { name: "Art Gallery of Ontario", image: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,g_xy_center,h_640,q_80,w_640,x_953,y_915/v1/clients/toronto/167_3_1451_jpeg_large72_ec376690-90e7-4328-b3d4-c3101f28ebea.jpg" },
+          { name: "St. Lawrence Market", image: "https://i0.wp.com/dineandfash.com/wp-content/uploads/2021/03/Best-Food-at-the-St.-Lawrence-Market-1.jpg?resize=810%2C1013&ssl=1" }
+        ],
+        Popular_Activities: [
+          { name: "Visit the Distillery District", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/1a/90/dc/entrada.jpg?w=600&h=-1&s=1" },
+          { name: "Explore Kensington Market", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXZj6W3jZ83BeIjpPHZtP7b4NVqwCNjGoQog&s" },
+          { name: "Enjoy the waterfront", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW_Tp0ndcxnKgCIqoeobOi9ZCpQ0_YBsR-6w&s" },
+          { name: "Attend a sports game", image: "https://cdn.vox-cdn.com/thumbor/YP06qljJQTnHoKJaGWzyfS_IE8Q=/0x0:1920x1080/1200x800/filters:focal(815x353:1121x659)/cdn.vox-cdn.com/uploads/chorus_image/image/72626459/image.0.jpeg" },
+          { name: "Experience the nightlife", image: "https://media.licdn.com/dms/image/D4E12AQEjsBisAnLsLA/article-cover_image-shrink_600_2000/0/1694382961350?e=2147483647&v=beta&t=ubmngmAkFdoCfmgjhGn5feGai9wLrTcVcPxXf6ZFN3Y" }
+        ],
+        Historic_Sites: [
+          { name: "Casa Loma", image: "https://casaloma.ca/wp-content/uploads/2019/02/casa1-1.jpg" },
+          { name: "Fort York", image: "https://www.danieletdaniel.ca/wp-content/uploads/job_listing/fort-york/Fort-York.jpg" },
+          { name: "St. James Cathedral", image: "https://oldtowntoronto.ca/wp-content/uploads/2017/04/st-james-cathedral-church-toronto.jpg" },
+          { name: "Black Creek Pioneer Village", image: "https://hikingthegta.com/wp-content/uploads/2022/08/img_7144.jpg" },
+          { name: "Toronto City Hall", image: "https://cdn.tourbytransit.com/toronto/images/562x422px-Toronto%20City%20Hall%20by%20deJerome%20via%20Flickr%20cc%202.0%20License.jpg" }
+        ],
+        Local_Food_Cuisine: [
+          { name: "Peameal Bacon Sandwich", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQS1TuGjdXNv9Y83HkDfoIQMPfCZLIC1RB6g&s" },
+          { name: "Butter Tart", image: "https://www.chocolatesandchai.com/wp-content/uploads/2023/07/Canadian-Butter-Tarts-Featured.jpg" },
+          { name: "Nanaimo Bar", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ3IoT9EwvFXdFugD4XcT03dPRh-7dSmv0Tw&s" },
+          { name: "Ketchup Chips", image: "https://www.tastyrewards.com/sites/default/files/2020-10/Packshots_Ketchup.jpg" },
+          { name: "Maple Syrup", image: "https://images-cdn.ubuy.co.in/64fbc6c0e434ac6ac01d88ed-great-value-pure-maple-syrup-12-5-fl-oz.jpg" }
+        ],
+        Recommended_Restaurants: [
+          { name: "Alo Restaurant", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBlvcrW7ByoHnDt3yr-TeOUWU7xbzv7ObUmQ&s" },
+          { name: "Bar Isabel", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVkFUeHFuNnefLZXecFmARBMdH4DgtPML-2A&s" },
+          { name: "Miku", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqzIbFQkbyhonkZfRvHovshS71gwoNnGYBQ&s" },
+          { name: "Buca", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB--8W71sedjp16vIl-11AtPsoLPJodHPYQw&s" },
+          { name: "Pai", image: "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/8685ae226058448ea69f640614c57449.jpeg?width=1000" }
+        ]
+      },
+      practical_information: {
+        weather: "Toronto experiences cold winters and warm summers. Average temperatures range from -1°C in winter to 25°C in summer.",
+        travel_tips: [
+          "Use public transport for convenience.",
+          "Visit in summer for festivals.",
+          "Book attractions in advance to avoid lines."
+        ],
+        nearby_cities_day_trips: [
+          "Niagara Falls",
+          "Ottawa",
+          "Hamilton"
+        ],
+        accommodation_options: [
+          "The Ritz-Carlton, Toronto",
+          "The Fairmont Royal York",
+          "Airbnb options in downtown"
+        ]
+      }
+    },
+    {
+      city: "Paris",
+      country: "France",
+      destination_image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/1c/9c.jpg",
+      brief_description: "Paris, the capital of France, is renowned for its art, fashion, gastronomy, and culture. It is home to iconic landmarks such as the Eiffel Tower.",
+      key_information: {
+        Top_Attractions: [
+          { name: "Eiffel Tower", image: "https://www.toureiffel.paris/themes/custom/tour_eiffel/build/images/home-discover-bg.jpg" },
+          { name: "Louvre Museum", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/4f/70/dc/cour-napoleon-et-pyramide.jpg?w=600&h=500&s=1" },
+          { name: "Notre-Dame Cathedral", image: "https://cdn.britannica.com/29/255529-050-63A22A3C/notre-dame-de-paris-cathedral-paris-france.jpg" },
+          { name: "Champs-Élysées", image: "https://www.thetrainline.com/cms/media/4040/europe_france_paris_champs-elysees.jpg?mode=crop&width=800&height=800&quality=70" },
+          { name: "Sacré-Cœur Basilica", image: "https://exjb9o85thm.exactdn.com/uploads/2023/07/02170829/3-bonnes-raisons-visite-dome.jpg?lossy=0&quality=90&webp=90&resize=500%2C691&ssl=1" }
+        ],
+        Popular_Activities: [
+          { name: "Take a Seine River Cruise", image: "https://media1.thrillophilia.com/filestore/7e20pyx20npmn1xqkflvqc8zm85j_shutterstock_1505629178.jpg" },
+          { name: "Explore Montmartre", image: "https://medias.moulinrouge.fr/wp-content/uploads/2023/08/maison_rose_resize-1024x1024.jpg" },
+          { name: "Visit a Parisian café", image: "https://citizen-femme.com/wp-content/uploads/2020/07/cafe-culture-paris-766x494.jpg" },
+          { name: "Attend a cabaret show", image: "https://media1.thrillophilia.com/filestore/37jrwmtjqln4wrd43hgydiwvgyrl_SC22.jpg?w=400&dpr=2" },
+          { name: "Discover the Latin Quarter", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/P1300734_Paris_V_place_de_la_Sorbonne_rwk.jpg/1200px-P1300734_Paris_V_place_de_la_Sorbonne_rwk.jpg" }
+        ],
+        Historic_Sites: [
+          { name: "Palace of Versailles", image: "https://cdn.britannica.com/65/114465-050-8C96BD81/Hall-of-Mirrors-ceiling-Jules-Hardouin-Mansart-Charles.jpg" },
+          { name: "Pantheon", image: "https://static.wixstatic.com/media/e41b5c_670b7255302d44c498e3a6bc8c3e580f~mv2.jpg/v1/fill/w_700,h_466,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/e41b5c_670b7255302d44c498e3a6bc8c3e580f~mv2.jpg" },
+          { name: "Conciergerie", image: "https://static.wixstatic.com/media/de5a6d_4f34a362d6134bac813a61019b9a79a5~mv2.webp/v1/fit/w_2500,h_1330,al_c/de5a6d_4f34a362d6134bac813a61019b9a79a5~mv2.webp" },
+          { name: "Sainte-Chapelle", image: "https://www.sainte-chapelle.fr/var/cmn_inter/storage/images/_aliases/article_vignette_webp/6/8/2/4/120454286-1-fre-FR/089f229887f5-14.webp.webp" },
+          { name: "Arc de Triomphe", image: "https://upload.wikimedia.org/wikipedia/commons/7/79/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg" }
+        ],
+        Local_Food_Cuisine: [
+          { name: "Croissant", image: "https://masabakery.in/cdn/shop/files/Croissant-min.jpg?v=1690781324" },
+          { name: "Baguette", image: "https://www.allrecipes.com/thmb/J96_s7wY7k0vQtMZ9l5_XQZn4cg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7028-french-baguettes-DDMFS-4x3-a3f7e7cc53654c8db2c9919148e7c915.jpg" },
+          { name: "Macarons", image: "https://www.tasteofhome.com/wp-content/uploads/2018/07/French-Macarons_EXPS_TOHFM23_226955_P2_MD_09_16_4b.jpg" },
+          { name: "Coq au Vin", image: "https://images.immediate.co.uk/production/volatile/sites/30/2012/01/coq-au-vin-3740fe3.jpg?quality=90&resize=556,505" },
+          { name: "Crepes", image: "https://www.nordicware.com/wp-content/uploads/2021/05/classic_crepes_1.jpg" }
+        ],
+        Recommended_Restaurants: [
+          { name: "Le Meurice", image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/442511470.jpg?k=b45ecd3dc243ac59e075ac8f4327a488ba544a54edc140d0f245f8c1814b9494&o=&hp=1" },
+          { name: "L'Arpège", image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F84d02f14-9b85-4503-a099-027f47204f1c_2048x1536.jpeg" },
+          { name: "Café de Flore", image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/df/06/76.jpg" },
+          { name: "L'Atelier de Joël Robuchon", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/76/99/f4/l-atelier-de-joel-robuchon.jpg?w=1200&h=-1&s=1" },
+          { name: "Le Relais de l'Entrecôte", image: "https://media-cdn.tripadvisor.com/media/photo-s/21/82/d1/aa/nos-tables-recouvertes.jpg" }
+        ]
+      },
+      practical_information: {
+        weather: "Paris enjoys a temperate climate with warm summers and mild winters. Average temperatures range from 3°C in winter to 25°C in summer.",
+        travel_tips: [
+          "Use the Metro for quick travel.",
+          "Visit museums on free entry days.",
+          "Learn a few French phrases."
+        ],
+        nearby_cities_day_trips: [
+          "Versailles",
+          "Giverny",
+          "Reims"
+        ],
+        accommodation_options: [
+          "Hôtel de Crillon",
+          "Le Meurice",
+          "Airbnb in Le Marais"
+        ]
+      }
+    },
+    {
+      city: "Dubai",
+      country: "UAE",
+      destination_image: "https://media.cnn.com/api/v1/images/stellar/prod/200924183413-dubai-9-1.jpg?q=w_1600,h_900,x_0,y_0,c_fill",
+      brief_description: "Dubai is a global city known for its modern architecture, luxury shopping, and vibrant nightlife. The Burj Khalifa is the tallest building in the world.",
+      key_information: {
+        Top_Attractions: [
+          { name: "Burj Khalifa", image: "https://images2.minutemediacdn.com/image/upload/c_fill,w_1200,ar_1:1,f_auto,q_auto,g_auto/shape/cover/sport/584459-istock-183342824-24fbfe616cffa90eb7dcf9d4aa8e445c.jpg" },
+          { name: "Dubai Mall", image: "https://octane.rent/wp-content/uploads/2024/06/crowd_of_tourists_walking_at_the_square_near_the_entrance_to_dubai_mall_1000.webp" },
+          { name: "Dubai Fountain", image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/ee/fb/5d.jpg" },
+          { name: "Palm Jumeirah", image: "https://cdn.britannica.com/27/178627-050-AF162D33/Palm-Jumeirah-Dubai-United-Arab-Emirates-International-2005.jpg" },
+          { name: "Dubai Marina", image: "https://media1.thrillophilia.com/filestore/jz2w8aik0bugu8srosh64guk9vct_1496478637_Dubai-Marina-emerald-green-water.jpg" }
+        ],
+        Popular_Activities: [
+          { name: "Desert Safari", image: "https://www.bookmytour.ae/public/package_gallery/1576943371-dreamnighttours-desertsafari.jpg" },
+          { name: "Visit the Gold Souk", image: "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/60000/60601-Gold-Souk.jpg" },
+          { name: "Explore Global Village", image: "https://www.constructionweekonline.com/cloud/2022/08/08/Global-Village-2.jpg" },
+          { name: "Skydiving over the Palm", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/a4/d3/51/skydive-in-dubai-see.jpg?w=1200&h=1200&s=1" },
+          { name: "Relax on Jumeirah Beach", image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221717523.jpg?k=251b65e453f33cd77b54a093687a1e459f713a81c7bbd35e4ec6ed02f0f23418&o=&hp=1" }
+        ],
+        Historic_Sites: [
+          { name: "Al Fahidi Historic District", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/63/31/ea/al-fahidi-historical.jpg?w=1200&h=1200&s=1" },
+          { name: "Dubai Museum", image: "https://upload.wikimedia.org/wikipedia/en/8/8c/Museum_of_the_future%2C_Dubai.jpeg" },
+          { name: "Sheikh Saeed Al Maktoum House", image: "https://www.visitdubai.com/-/media/gathercontent/poi/s/sheikh-saeed-al-maktoum-house/fallback-image/house-of-sheikh-saeed-al-maktoum-gettyjpgjpg.jpg" },
+          { name: "Jumeirah Mosque", image: "https://upload.wikimedia.org/wikipedia/commons/3/39/Jumeira_Mosque_Dubai.jpg" },
+          { name: "Dubai Creek", image: "https://www.visitdubai.com/-/media/gathercontent/article/o/one-day-at-dubai-creek/dubai-creek-det-3.jpg" }
+        ],
+        Local_Food_Cuisine: [
+          { name: "Shawarma", image: "https://arteflame.com/cdn/shop/articles/Grilled_Shawarma_Recipe_on_the_Arteflame_Grill.webp?v=1716336625&width=1600" },
+          { name: "Hummus", image: "https://www.earthybliss.in/cdn/shop/products/main_1400x.jpg?v=1673889015" },
+          { name: "Falafel", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Rmf1pTNK0llpxLID6g8-GruuZ14LAs7M3A&s" },
+          { name: "Baklava", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXKrX8YONgniBJuB5m-OoPm7tEip_Lnez4cw&s" },
+          { name: "Machboos", image: "https://www.endofthefork.com/wp-content/uploads/2023/06/machboos-sq.jpg" }
+        ],
+        Recommended_Restaurants: [
+          { name: "At.mosphere", image: "https://blog.eatapp.co/content/images/2017/05/BurjKhalifa-2.png" },
+          { name: "Al Fanar Restaurant", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/e1/a4/a2/al-fanar-restaurant-and.jpg?w=1200&h=-1&s=1" },
+          { name: "Zuma", image: "https://zumarestaurant.com/wp-content/uploads/2018/11/dubai-zuma-FINAL12.jpg" },
+          { name: "Pierchic", image: "https://b.zmtcdn.com/data/pictures/9/201649/005347ac81a745bc620db4d540fb49b9.jpg" },
+          { name: "Ravi Restaurant", image: "https://content.jdmagicbox.com/comp/rajkot/l4/0281px281.x281.191203102617.r7l4/catalogue/ravi-restaurant-150-feet-ring-road-rajkot-caterers-0uhciglzjr.jpg" }
+        ]
+      },
+      practical_information: {
+        weather: "Dubai has a hot desert climate with extremely hot summers and mild winters. Average temperatures can exceed 40°C in summer.",
+        travel_tips: [
+          "Dress modestly in public areas.",
+          "Stay hydrated during the day.",
+          "Plan activities for cooler hours."
+        ],
+        nearby_cities_day_trips: [
+          "Abu Dhabi",
+          "Sharjah",
+          "Ajman"
+        ],
+        accommodation_options: [
+          "Burj Al Arab",
+          "Atlantis The Palm",
+          "Airbnb options in Downtown Dubai"
+        ]
+      }
+    },
+    {
+        "city": "New York",
+        "country": "USA",
+        "destination_image": "https://fullsuitcase.com/wp-content/uploads/2022/05/One-day-in-New-York-USA-NYC-day-trip-itinerary.jpg",
+        "brief_description": "New York City is known for its iconic skyline, vibrant culture, and landmarks like the Statue of Liberty and Times Square.",
+        "key_information": {
+            "Top_Attractions": [
+                { "name": "Statue of Liberty", "image": "https://goop-img.com/cdn-cgi/image/format=auto,onerror=redirect,metadata=copyright/wp-content/uploads/2016/09/new-york-guide.jpg" },
+                { "name": "Central Park", "image": "https://media.architecturaldigest.com/photos/62670cf1a841e371198e0b28/1:1/w_2001,h_2001,c_limit/GettyImages-1347979016.jpg" },
+                { "name": "Empire State Building", "image": "https://flatironnomad.nyc/wp-content/uploads/2023/04/esb-header-history-scaled.jpg" },
+                { "name": "Brooklyn Bridge", "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Brooklyn_Bridge_Manhattan.jpg" },
+                { "name": "Times Square", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/800px-New_york_times_square-terabass.jpg" }
+            ],
+            "Popular_Activities": [
+                { "name": "Broadway Show", "image": "https://www.broadwayinbound.com/media/22697897/and-juliet-broadway-musical-group-discount-tickets-230310.jpg?width=500&height=400" },
+                { "name": "Visit Museums", "image": "https://static01.nyt.com/images/2019/11/29/smarter-living/00sl-museums/merlin_156969357_5c37f256-0b6d-400d-bfba-cabd3e6c4dfd-superJumbo.jpg" },
+                { "name": "Explore Chinatown", "image": "https://s.hdnux.com/photos/01/31/00/41/23332953/4/ratio3x2_1920.jpg" },
+                { "name": "Shopping in SoHo", "image": "https://image.newyork.com.au/wp-content/uploads/2012/07/Shopping-in-SoHo.jpg" },
+                { "name": "Walk on the High Line", "image": "https://media.timeout.com/images/102540127/image.jpg" }
+            ],
+            "Historic_Sites": [
+                { "name": "Ellis Island", "image": "https://assets.editorial.aetnd.com/uploads/2009/10/gettyimages-86483639.jpg" },
+                { "name": "One World Trade Center", "image": "https://s3.amazonaws.com/images.skyscrapercenter.com/thumbs/42882_500x650.jpg" },
+                { "name": "The Met Cloisters", "image": "https://image.newyork.com.au/wp-content/uploads/2016/09/The-Met-Cloisters-in-New-York.jpg" },
+                { "name": "Federal Hall", "image": "https://media.architecturaldigest.com/photos/5670919e0b38dbaa239f0dd5/1:1/w_2451,h_2451,c_limit/federal-hall-new-york-city-restoration-01.jpeg" },
+                { "name": "St. Patrick's Cathedral", "image": "https://21505494.fs1.hubspotusercontent-na1.net/hub/21505494/hubfs/St.%20Patricks%20Cathedral.webp?width=902&height=612&name=St.%20Patricks%20Cathedral.webp" }
+            ],
+            "Local_Food_Cuisine": [
+                { "name": "New York Style Pizza", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiKxCwZsA1Qig8GWZsW1ROPSvTpqvF7uz7cg&s" },
+                { "name": "Bagels", "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/02/16/0/FNM_030122-Homemade-Bagels_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1645023418907.webp" },
+                { "name": "Hot Dogs", "image": "https://images.themodernproper.com/billowy-turkey/production/posts/HotDogToppings_7.jpg?w=1200&h=1200&q=60&fm=jpg&fit=crop&dm=1691006985&s=2aed2c6a11a585395332775227ca1c59" },
+                { "name": "Cheesecake", "image": "https://sugarspunrun.com/wp-content/uploads/2023/06/Strawberry-cheesecake-recipe-6-of-8.jpg" },
+                { "name": "Deli Sandwiches", "image": "https://images.immediate.co.uk/production/volatile/sites/2/2020/03/Deli-sandwich_preview-0c36735.jpg" }
+            ],
+            "Recommended_Restaurants": [
+                { "name": "Katz's Delicatessen", "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/fe/77/67/located-on-the-corner.jpg?w=1100&h=-1&s=1" },
+                { "name": "Le Bernardin", "image": "https://res.cloudinary.com/the-infatuation/image/upload/v1656116808/cms/DavidALee_Le_Bernardin_Interior_001.jpg" },
+                { "name": "Per Se", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR55UZyqpQW4bk2ZuOkYUvLwi2ISFjv_Cb-_g&s" },
+                { "name": "Peter Luger Steakhouse", "image": "https://images.squarespace-cdn.com/content/v1/59fc898ee5dd5ba72fb6e7e5/1578092345427-ZJP95SAN6A8HCBO8D5F0/IMG_0301.JPG" },
+                { "name": "Russ & Daughters", "image": "https://images.squarespace-cdn.com/content/v1/57be0600e3df288b8ce9492a/1652907084457-J640RS9XS79XFXEH78Y1/Untitled-4_0002_Layer+1.jpg" }
+            ]
+        },
+        "practical_information": {
+            "weather": "New York has a temperate climate with hot summers and cold winters. Temperatures range from -1°C in winter to 30°C in summer.",
+            "travel_tips": [
+                "Use public transportation.",
+                "Book tickets for popular attractions in advance.",
+                "Explore neighborhoods on foot."
+            ],
+            "nearby_cities_day_trips": [
+                "Philadelphia",
+                "Washington D.C.",
+                "Boston"
+            ],
+            "accommodation_options": [
+                "The Plaza Hotel",
+                "The St. Regis New York",
+                "Airbnb options in Manhattan"
+            ]
+        }
+    },
+    {
+        "city": "Tokyo",
+        "country": "Japan",
+        "destination_image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4b/5d/10/caption.jpg?w=1400&h=1400&s=1&cx=1005&cy=690&chk=v1_2ed86f729380ea073850",
+        "brief_description": "Tokyo, Japan's bustling capital, is known for its modern skyscrapers, traditional temples, and vibrant pop culture.",
+        "key_information": {
+            "Top_Attractions": [
+                { "name": "Tokyo Tower", "image": "https://offbeatjapan.com/wp-content/uploads/2011/10/tokyo-tower-night-landmark.jpg" },
+                { "name": "Senso-ji Temple", "image": "https://www.vikipandit.com/wp-content/uploads/sensoji-temple-1024x683.jpg" },
+                { "name": "Shibuya Crossing", "image": "https://plus.unsplash.com/premium_photo-1661902398022-762e88ff3f82?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2hpYnV5YSUyMGNyb3NzaW5nJTJDJTIwc2hpYnV5YSUyQyUyMGphcGFufGVufDB8fDB8fHww" },
+                { "name": "Ueno Park", "image": "https://www.datocms-assets.com/101439/1692427273-ueno-park.jpg?auto=format&fit=max&w=1200" },
+                { "name": "Meiji Shrine", "image": "https://blog.japanwondertravel.com/wp-content/uploads/2021/03/1582531_l-scaled.jpg" }
+            ],
+            "Popular_Activities": [
+                { "name": "Cherry Blossom Viewing", "image": "https://res.cloudinary.com/enchanting/f_auto,q_70,w_900,h_490,c_fill/et-web/2019/03/Himeji-Castle.jpg" },
+                { "name": "Visit Anime District Akihabara", "image": "https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2020/05/akihabara-iStock-484915982-1024x683.jpg" },
+                { "name": "Explore Harajuku", "image": "https://images.squarespace-cdn.com/content/v1/63e33cb9b869157e0d015b70/0b5f551f-ae8f-498d-8770-d514c8468075/Tokyo%2BJapan%2BTravel%2BGuide%2BItinerary%2BI%2BCristina%2BViseu%2BI%2BHarajuku-4.jpeg" },
+                { "name": "Robot Restaurant Show", "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/71/fc/75.jpg" },
+                { "name": "Shop in Ginza", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ginza-WAKO_at_night.jpg/1200px-Ginza-WAKO_at_night.jpg" }
+            ],
+            "Historic_Sites": [
+                { "name": "Imperial Palace", "image": "https://pohcdn.com/guide/sites/default/files/styles/paragraph__hero_banner__hb_image__1880bp/public/hero_banner/imperial-palace_optimized.jpg" },
+                { "name": "Edo-Tokyo Museum", "image": "https://www.gotokyo.org/en/spot/1745/images/1745_2_1400x1100.jpg" },
+                { "name": "Hamarikyu Gardens", "image": "https://cdn.kyushuandtokyo.org/front_assets/images_other/spot/small/aflo_RYBA005825.jpg" },
+                { "name": "Nezu Shrine", "image": "https://tokyo-in-pics.com/wp-content/uploads/2024/06/Nezu-Shrine-stage-and-azaleas.webp" },
+                { "name": "Zojoji Temple", "image": "https://tokyo-in-pics.com/wp-content/uploads/2023/05/Zojoji-and-Tokyo-Tower.webp" }
+            ],
+            "Local_Food_Cuisine": [
+                { "name": "Sushi", "image": "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg" },
+                { "name": "Ramen", "image": "https://www.kikkoman.eu/fileadmin/_processed_/b/e/csm_1101-recipe-page-Authentic-Japanese-soy-sauce-ramen_mobile_c83e83c70c.webp" },
+                { "name": "Tempura", "image": "https://delizzious.com/wp-content/uploads/2021/03/vegetable-tempura-3-1-585x878.jpg" },
+                { "name": "Takoyaki", "image": "https://flouredframe.com/wp-content/uploads/2021/01/vegan-takoyaki-ft-image-1200x1200-1.jpg" },
+                { "name": "Okonomiyaki", "image": "https://flouredframe.com/wp-content/uploads/2020/08/vegan-okonomiyaki-ft-image-1200x1200-1.jpg" }
+            ],
+            "Recommended_Restaurants": [
+                { "name": "Sukiyabashi Jiro", "image": "https://prod-rte-static.rakutentravelxchange.com/2b845e29-69e2-4f6e-a78c-8819713223f5.jpg?height=500&format=webp" },
+                { "name": "Narisawa", "image": "https://d267qvt8mf7rfa.cloudfront.net/restaurant/217/mainImage.jpg" },
+                { "name": "Ichiran Ramen", "image": "https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2014/06/ichiran_hd-1024x640.jpg" },
+                { "name": "Tempura Kondo", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0bNRx7IJxLdhRvQRfVzdno1UWpYuN9b2x6Q&s" },
+                { "name": "Ginza Kyubey", "image": "https://seeingtheworldinsteps.com/wp-content/uploads/2023/01/img_6714.jpg?w=750" }
+            ]
+        },
+        "practical_information": {
+            "weather": "Tokyo has a humid subtropical climate with hot summers and mild winters. Average temperatures range from 5°C in winter to 30°C in summer.",
+            "travel_tips": [
+                "Learn basic Japanese phrases.",
+                "Use public transportation for convenience.",
+                "Visit shrines and temples respectfully."
+            ],
+            "nearby_cities_day_trips": [
+                "Yokohama",
+                "Kamakura",
+                "Nikko"
+            ],
+            "accommodation_options": [
+                "Park Hyatt Tokyo",
+                "The Ritz-Carlton, Tokyo",
+                "Airbnb options in Shibuya"
+            ]
+        }
+    }
+  ];
+$(document).ready(function () {
+    let selectedCityData, startDate, endDate;
+
+    // Autocomplete for the city search field
+    $("#citySearch").autocomplete({
+        source: cities.map(city => `${city.city}, ${city.country}`),
+        select: function (event, ui) {
+            const selectedCity = ui.item.value.split(", ")[0];
+            selectedCityData = cities.find(city => city.city === selectedCity);
+        }
+    });
+
+    
+// Handle next and previous buttons
+$('#nextDay').on('click', function () {
+    if (currentPage < $('#timetableCarousel .carousel-item').length - 1) {
+        currentPage++;
+        updateCarousel();
+    }
+});
+
+
+    // Confirm Dates and City Selection
+    $('#confirmDates').on('click', function () {
+        startDate = $('#startDate').val();
+        endDate = $('#endDate').val();
+
+        if (!selectedCityData) {
+            alert('Please select a city.');
+            return;
+        }
+
+        if (!startDate || !endDate) {
+            alert('Please select both start and end dates.');
+            return;
+        }
+
+        displayActivities(selectedCityData);
+        generateTimetable();
+        displayMustDoActivities(selectedCityData);  // Display "Activities You Must Do"
+    displayMustTryFood(selectedCityData);       // Display "Food You Must Try"
+    });
+
+// Function to display "Activities You Must Do"
+function displayMustDoActivities(cityData) {
+  $('#mustDoActivities').empty(); // Clear previous activities
+
+  const activities = [
+      ...cityData.key_information.Top_Attractions,
+      ...cityData.key_information.Popular_Activities,
+      ...cityData.key_information.Historic_Sites
+  ];
+
+  activities.slice(0, 6).forEach(activity => {
+      const imageUrl = activity.image ? activity.image : "https://via.placeholder.com/150"; // Use actual URL or placeholder if missing
+      $('#mustDoActivities').append(`
+          <div class="col-md-2 card-container">
+              <div class="card">
+                  <img src="${imageUrl}" alt="${activity.name}">
+                  <div class="card-body">
+                      <p class="card-title">${activity.name}</p>
+                  </div>
+              </div>
+          </div>
+      `);
+  });
+}
+
+// Function to display "Food You Must Try"
+function displayMustTryFood(cityData) {
+  $('#mustTryFood').empty(); // Clear previous food items
+
+  const foodItems = cityData.key_information.Local_Food_Cuisine;
+
+  foodItems.slice(0, 6).forEach(food => {
+      const imageUrl = food.image ? food.image : "https://via.placeholder.com/150"; // Use actual URL or placeholder if missing
+      $('#mustTryFood').append(`
+          <div class="col-md-2 card-container">
+              <div class="card">
+                  <img src="${imageUrl}" alt="${food.name}">
+                  <div class="card-body">
+                      <p class="card-title">${food.name}</p>
+                  </div>
+              </div>
+          </div>
+      `);
+  });
+}
+ 
+
+
+// Function to display activities based on selected city
+    function displayActivities(cityData) {
+        $('#activities').empty();
+
+        const activities = [...cityData.key_information.Top_Attractions,
+        ...cityData.key_information.Popular_Activities,
+        ...cityData.key_information.Historic_Sites];
+
+        activities.forEach(activity => {
+            $('#activities').append(`<div class="activity card p-2 m-2" draggable="true" data-activity="${activity.name}">${activity.name}</div>`);
+        });
+
+        handleDragAndDrop();
+    }
+
+    // Handle drag and drop functionality
+    let draggedActivity = null;
+
+    function handleDragAndDrop() {
+        $('.activity').on('dragstart', function (event) {
+            draggedActivity = $(this).data('activity');
+            event.originalEvent.dataTransfer.setData('text', draggedActivity);
+        });
+
+        $('.dropzone').on('dragover', function (event) {
+            event.preventDefault();
+            $(this).addClass('highlight');
+        }).on('dragleave', function () {
+            $(this).removeClass('highlight');
+        }).on('drop', function (event) {
+            event.preventDefault();
+            $(this).removeClass('highlight').addClass('activity-dropped');
+            $(this).text(draggedActivity);
+        });
+    }
+
+    // Generate Timetable (this function remains the same)
+    function generateTimetable() {
+        const oneDay = 24 * 60 * 60 * 1000;
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        const numDays = Math.round((end - start) / oneDay) + 1;
+
+        let carouselInner = $('#timetableCarousel');
+        carouselInner.empty(); // Clear existing content
+
+        for (let i = 0; i < numDays; i += 7) {
+            let carouselItem = $('<div>').addClass('carousel-item');
+            if (i === 0) carouselItem.addClass('active'); // Make first item active
+
+            let table = $('<table>').addClass('table table-bordered text-center');
+            let thead = $('<thead>').addClass('table-dark');
+            let tbody = $('<tbody>');
+
+            // Create header row
+            let headerRow = $('<tr>');
+            headerRow.append('<th>Time</th>');
+            for (let j = i; j < i + 7 && j < numDays; j++) {
+                let currentDate = new Date(start.getTime() + j * oneDay);
+                let day = currentDate.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+                headerRow.append(`<th>${day}</th>`);
+            }
+            thead.append(headerRow);
+
+            // Create time slots
+            for (let hour = 9; hour <= 21; hour++) {
+                let row = $('<tr>');
+                row.append(`<td>${hour}:00</td>`);
+
+                for (let j = i; j < i + 7 && j < numDays; j++) {
+                    let dropzone = $('<td>').addClass('dropzone').attr('data-day', j);
+                    row.append(dropzone);
+                }
+                tbody.append(row);
+            }
+
+            table.append(thead).append(tbody);
+            carouselItem.append(table);
+            carouselInner.append(carouselItem);
+        }
+
+        handleDragAndDrop();
+    }
+
+
+    // PDF download functionality (this remains the same)
+    // Generate PDF in chronological order with better formatting
+$('#downloadPDF').on('click', function () {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    let content = `Travel Trip Dates: ${$('#startDate').val()} to ${$('#endDate').val()}\n\n`;
+
+    const activities = [];
+    $('.dropzone.activity-dropped').each(function () {
+        const activity = $(this).text();
+        const dayIndex = $(this).data('day');
+        const time = $(this).parent().children().first().text();
+        const date = new Date(startDate);
+        date.setDate(date.getDate() + dayIndex);
+        const formattedDate = date.toLocaleDateString('en-US', {
+            weekday: 'short',
+            month: 'short',
+            day: 'numeric',
+        });
+
+        activities.push({ date: formattedDate, time, activity });
+    });
+
+    // Sort activities chronologically by date and time
+    activities.sort((a, b) => {
+        const dateA = new Date(a.date), dateB = new Date(b.date);
+        return dateA - dateB || (a.time > b.time ? 1 : -1);
+    });
+
+    activities.forEach(({ date, time, activity }) => {
+        content += `${date}: ${time} (${activity})\n`;
+    });
+
+    doc.text("Your Travel Itinerary", 10, 10);
+    doc.text(content || 'No activities planned.', 10, 20);
+    doc.save('trip-timetable.pdf');
+});
+});
+
+    </script>
+</body>
+
+</html>
