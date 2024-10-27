@@ -6,178 +6,175 @@
   <meta name="description" content="Plan your dream trip with our easy-to-use itinerary builder and travel planning tools.">
   <meta name="keywords" content="travel, itinerary, budget calculator, weather forecast, trip planner">
   <meta name="author" content="Utsav Jhakhariya">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
   <title>Travel Planner | Plan Your Trip</title>
     
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- Include Header -->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <i>Roamio</i>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="wow.html">Search</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="itinerary.html">Itinerary</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="budget.html">Budget</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="weather.html">Weather</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="testimonial.html">Reviews</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">
-                <i class="fas fa-sign-in-alt"></i> <!-- Login Icon -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signup.html">
-                <i class="fas fa-user-plus"></i> <!-- Signup Icon -->
-              </a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Roamio Logo" class="brand-logo">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wow.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="itinerary.html">Itinerary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="budget.html">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="weather.html">Weather</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="testimonial.html">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
-  
-  <!-- Font Awesome link -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  
+    </div>
+  </nav>
+</header>
+
 
 <div class="welcome-container">
-    <h1 id="greeting"></h1>
-    <p>This is your personalized dashboard. Explore your options!</p>
-    <p>More exciting content coming soon...</p>
-  </div>
+  <h1 id="greeting"></h1>
+</div>
 
-  <!-- Hero Section 
-  <section class="hero bg-primary text-white text-center py-5">
-    <div class="container">
-      <h1 class="display-4">Plan Your <kbd>Dream</kbd> Trip</h1>
-      <p class="lead">Easily create custom itineraries, track your budget, and check the weather for your next adventure.</p>
-      <a href="wow.html" class="btn btn-light btn-lg mt-3">Start Planning</a>
-    </div>
-  </section>-->
+<br>
+<!-- Floating Sticky Chat Button -->
+<a href="one.html" id="chat-button" title="Chat with us">
+    <i class="fas fa-comment"></i>
+</a>
 
 
   <div class="parallax">
     <div class="glass-effect">
-        <h1>Hello. I'm Wander.X<br>How can I help you?</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi eius sequi quos nisi aspernatur delectus enim voluptatem. Aperiam cupiditate veritatis quo deleniti! Tenetur accusantium quaerat inventore! Eveniet exercitationem facere sequi!</p>
-        <div>
-            <a href="#" class="btn btn-primary cta-button">Get Started</a>
-            <a href="#" class="btn btn-secondary cta-button">Learn More</a>
+        <h1>Hello. I'm Roamio 👋<br>How can I help you?</h1>
+        <p>
+          Discover your next adventure with Roamio! From hidden gems to iconic destinations, our travel planner helps you create personalized itineraries, manage your budget, and explore local highlights with ease. Start planning today, and let us guide you on a journey you'll never forget.
+          <br><br>Ready to explore? Choose your dream destination, and let Roamio handle the rest!
+      </p>
+      <div>
+            <a href="wow.html" class="getstartedbtn">Get Started</a>
+            <a href="about.html" class="learnmorebtn">Learn More</a>
         </div>
     </div>
 </div>
 
+<br><br>
   <!-- Features Overview Section -->
   <section class="features py-5">
     <div class="container text-center">
-      <h2 class="mb-4">Our Features</h2>
+      <br><br>
+      <h2 class="mb-4">✨ Our Features</h2>
+      <p class="text-muted text-center">Explore a suite of tools designed to make travel planning simple, enjoyable, and personalized just for you.</p>
+
       <div class="row">
         <!-- Feature 1: Itinerary Builder -->
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card border-0">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/07/a8/2c/caption.jpg?w=1400&h=1400&s=1" class="card-img-top" alt="Itinerary Builder">
+            <img src="https://img.freepik.com/premium-photo/old-map-compass_847423-6000.jpg" class="card-img-top" alt="Itinerary Builder">
             <div class="card-body">
               <h5 class="card-title">Itinerary Builder</h5>
               <p class="card-text">Drag and drop activities into your daily itinerary and customize your trip to suit your preferences.</p>
-              <a href="itinerary.html" class="btn btn-primary">Start Building</a>
+              <a href="itinerary.html" class="featurebutton">Start Building</a>
             </div>
           </div>
         </div>
         <!-- Feature 2: Budget Calculator -->
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card border-0">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/07/a8/2c/caption.jpg?w=1400&h=1400&s=1" class="card-img-top" alt="Budget Calculator">
+            <img src="https://www.hypergene.com/media/2510/illustration-16.jpg?anchor=center&mode=crop&width=1360&height=718&rnd=132975408481530000" class="card-img-top" alt="Budget Calculator">
             <div class="card-body">
               <h5 class="card-title">Budget Calculator</h5>
-              <p class="card-text">Track all your travel expenses and stay within budget with our easy-to-use calculator.</p>
-              <a href="budget.html" class="btn btn-primary">Calculate Budget</a>
+              <p class="card-text">Track all your travel expenses and stay within the budget with your easy-to-use calculator and currency convertor.</p>
+              <a href="budget.html" class="featurebutton">Calculate Budget</a>
             </div>
           </div>
         </div>
         <!-- Feature 3: Weather Forecast -->
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card border-0">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/07/a8/2c/caption.jpg?w=1400&h=1400&s=1" class="card-img-top" alt="Weather Forecast">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20201012/pngtree-white-cloud-on-blue-sky-weather-background-image_410050.jpg" class="card-img-top" alt="Weather Forecast">
             <div class="card-body">
               <h5 class="card-title">Weather Forecast</h5>
               <p class="card-text">Check the weather for your travel dates and plan accordingly with our reliable weather forecast tool.</p>
-              <a href="weather.html" class="btn btn-primary">Check Weather</a>
+              <a href="weather.html" class="featurebutton">Check Weather</a>
             </div>
           </div>
         </div>
-      </div>
+      </div><br><br>
     </div>
   </section>
+<br><br>
+<!-- Testimonials Section -->
+<section class="testimonials bg-light py-5">
+  <div class="container text-center">
+    <h2 class="mb-4 text-black">🙋🏻 What Our Users Say</h2>
+    <p class="text-black-50 text-center">Hear from travelers who’ve turned their dream journeys into unforgettable experiences with Roamio.</p>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials bg-light py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">What Our Users Say</h2>
-      <div class="row">
-        <!-- Testimonial 1 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card border-0">
-            <div class="card-body">
-              <p class="card-text">"Travel Planner made planning my trip so much easier! I loved the drag-and-drop itinerary feature."</p>
-              <h5 class="card-title">- Sarah M.</h5>
-            </div>
-          </div>
-        </div>
-        <!-- Testimonial 2 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card border-0">
-            <div class="card-body">
-              <p class="card-text">"The budget calculator helped me stick to my travel budget, and I never overspent!"</p>
-              <h5 class="card-title">- John D.</h5>
-            </div>
-          </div>
-        </div>
-        <!-- Testimonial 3 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card border-0">
-            <div class="card-body">
-              <p class="card-text">"Checking the weather before my trip saved me from unexpected rain. Highly recommend!"</p>
-              <h5 class="card-title">- Emily R.</h5>
-            </div>
-          </div>
+    <div class="row">
+      
+      <!-- Testimonial 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah M." class="mb-3">
+          <p>"Travel Planner made planning my trip so much easier! I loved the drag-and-drop itinerary feature."</p>
+          <h5>- Sarah M.</h5>
         </div>
       </div>
+      
+      <!-- Testimonial 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="John D." class="mb-3">
+          <p>"The budget calculator helped me stick to my travel budget, and I never overspent!"</p>
+          <h5>- Jordan W.</h5>
+        </div>
+      </div>
+      
+      <!-- Testimonial 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily R." class="mb-3">
+          <p>"Using Roamio for my first solo trip was a game-changer. The detailed itinerary kept me on track."</p>
+          <h5>- Sophie L.</h5>
+        </div>
+      </div>
+      
     </div>
+    
     <!-- Bootstrap Centered Button -->
-<div class="d-flex justify-content-center align-items-center">
-  <a href="https://yourlink.com" class="btn btn-primary btn-lg" role="button">
-      Read More
-  </a>
-</div>
-  </section>
+    <div class="d-flex justify-content-center align-items-center">
+      <a href="testimonial.html" class="testbutton" role="button">
+          Read More
+      </a>
+    </div>
+  </div>
+</section>
 
 
 
@@ -186,15 +183,9 @@
 
   <div class="container recommended-section">
     <div class="section-heading mb-4">
-        <h1><b>Recommended Destinations</b></h1>
-        <div class="d-flex justify-content-end align-items-center">
-            <button class="carousel-control-prev me-2" type="button" data-bs-target="#recommendedCarousel" data-bs-slide="prev">
-                <i class="fas fa-arrow-left" aria-hidden="true"></i>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#recommendedCarousel" data-bs-slide="next">
-                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </button>
-        </div>
+        <h2 class="text-center"><b>🗺️ Recommended Destinations</b></h2>
+        <p class="text-muted text-center">Handpicked spots for your next adventure, whether you seek relaxation, exploration, or excitement.</p>
+
     </div>
 
     <!-- Carousel -->
@@ -205,41 +196,62 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-3"> <!-- Use col-12 for mobile, col-sm-6 for tablets, and col-md-3 for larger screens -->
                         <div class="card">
-                            <img src="https://via.placeholder.com/300x250" alt="Paris">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/15/6d/d6/paris.jpg?w=1400&h=1400&s=1" alt="Paris">
                             <div class="card-body">
-                                <p class="destination-title">Paris</p>
+                                <p class="destination-title">PARIS</p>
                                 <p class="destination-info">France - The City of Light, known for its monuments, art, and culture.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="rating">
                                         <span class="star-rating">★★★★★</span> 5.0
                                     </span>
-                                    <button class="btn btn-primary see-more-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasParis">See More</button>
+                                    <button class="getstartedbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasParis">See More</button>
                             </div>
                                 </div>
                         </div>
                     </div>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasParis" aria-labelledby="offcanvasParisLabel">
-                        <div class="offcanvas-header">
-                            <h5 id="offcanvasParisLabel">Paris</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <img src="https://via.placeholder.com/300x250" alt="Paris" class="img-fluid mb-3">
-                            <p>Paris, the capital city of France, is renowned for its art, fashion, and monuments like the Eiffel Tower.</p>
-                            <h6>Popular Activities:</h6>
-                            <ul>
-                                <li>Visiting the Eiffel Tower</li>
-                                <li>Exploring the Louvre Museum</li>
-                                <li>Walking along the Seine River</li>
-                            </ul>
-                            <button class="btn btn-success">Book Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
+                      <div class="offcanvas-header">
+                          <h5 id="offcanvasParisLabel"><i class="fas fa-city"></i> Paris - The City of Lights</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/15/6d/d6/paris.jpg?w=1400&h=1400&s=1" alt="Paris" class="img-fluid mb-3">
+                          
+                          <p>
+                              <i class="fas fa-globe-europe"></i> Paris, the capital city of France, is a global hub for art, fashion, gastronomy, and culture. 
+                              Known as the "City of Lights," Paris is home to iconic landmarks and rich history, making it one of the most popular travel destinations worldwide.
+                          </p>
+                          
+                          <h6><i class="fas fa-star"></i> Popular Activities:</h6>
+                          <ul>
+                              <li><i class="fas fa-landmark"></i> Visiting the Eiffel Tower</li>
+                              <li><i class="fas fa-palette"></i> Exploring the Louvre Museum</li>
+                              <li><i class="fas fa-walking"></i> Strolling through Montmartre and enjoying the artist scene</li>
+                              <li><i class="fas fa-utensils"></i> Savoring French cuisine at charming cafés</li>
+                              <li><i class="fas fa-ship"></i> Taking a boat tour along the Seine River</li>
+                          </ul>
+                  
+                          <h6><i class="fas fa-calendar-alt"></i> Best Time to Visit:</h6>
+                          <p>
+                              Spring (April to June) and Fall (September to November) offer the most pleasant weather, making it ideal for outdoor activities and sightseeing.
+                          </p>
+                  
+                          <h6><i class="fas fa-comments"></i> Traveler Tips:</h6>
+                          <p>
+                              Purchase tickets for attractions like the Louvre and Eiffel Tower in advance to avoid long queues. Make sure to explore the local markets and experience authentic Parisian life.
+                          </p>
+                  
+                          <!-- Buttons with page redirects -->
+                          <button class="btn btn-success" onclick="location.href='itinerary.html';"><i class="fas fa-plane-departure"></i> Book Now</button>
+                          <button class="btn btn-secondary" onclick="location.href='wow.html';"><i class="fas fa-info-circle"></i> Learn More</button>
+                      </div>
+                  </div>
+                  
+                    
                     
                     <div class="col-md-3">
                         <div class="card">
-                            <img src="https://via.placeholder.com/300x250" alt="London">
+                            <img src="https://babylontours.com/wp-content/uploads/2016/09/london-441853_960_720.jpg" alt="London">
                             <div class="card-body">
                                 <p class="destination-title">London</p>
                                 <p class="destination-info">United Kingdom - A historical city known for landmarks like the Big Ben and Buckingham Palace.</p>
@@ -247,33 +259,52 @@
                                     <span class="rating">
                                         <span class="star-rating">★★★★</span> 4.8
                                     </span>
-                                    <button class="btn btn-primary see-more-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLondon">See More</button>
+                                    <button class="getstartedbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLondon">See More</button>
                             </div>
                             </div>
                         </div>
                     </div>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasLondon" aria-labelledby="offcanvasLondonLabel">
-                        <div class="offcanvas-header">
-                            <h5 id="offcanvasLondonLabel">London</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <img src="https://via.placeholder.com/300x250" alt="London" class="img-fluid mb-3">
-                            <p>London is a vibrant city known for its iconic landmarks such as the Big Ben, Tower Bridge, and Buckingham Palace.</p>
-                            <h6>Popular Activities:</h6>
-                            <ul>
-                                <li>Visiting the British Museum</li>
-                                <li>Exploring the Tower of London</li>
-                                <li>Watching a play in the West End</li>
-                            </ul>
-                            <button class="btn btn-success">Book Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
+                      <div class="offcanvas-header">
+                          <h5 id="offcanvasLondonLabel"><i class="fas fa-city"></i> London - The Heart of England</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          <img src="https://babylontours.com/wp-content/uploads/2016/09/london-441853_960_720.jpg" alt="London" class="img-fluid mb-3">
+                          
+                          <p>
+                              <i class="fas fa-globe-europe"></i> London, the capital of England, is a vibrant and historic city known for its iconic landmarks such as Big Ben, Tower Bridge, and Buckingham Palace. It offers a perfect blend of modern attractions and historical charm.
+                          </p>
+                  
+                          <h6><i class="fas fa-star"></i> Popular Activities:</h6>
+                          <ul>
+                              <li><i class="fas fa-landmark"></i> Visiting the British Museum</li>
+                              <li><i class="fas fa-university"></i> Exploring the Tower of London</li>
+                              <li><i class="fas fa-theater-masks"></i> Watching a play in the West End</li>
+                              <li><i class="fas fa-ship"></i> Taking a boat ride on the Thames River</li>
+                              <li><i class="fas fa-bus-alt"></i> Touring the city on a red double-decker bus</li>
+                          </ul>
+                  
+                          <h6><i class="fas fa-calendar-alt"></i> Best Time to Visit:</h6>
+                          <p>
+                              The best time to visit London is from March to May, when the temperatures are mild, and the city’s parks are green and blooming.
+                          </p>
+                  
+                          <h6><i class="fas fa-comments"></i> Traveler Tips:</h6>
+                          <p>
+                              Consider purchasing an Oyster card for easy travel across public transportation. Don’t forget to explore the local markets, such as Borough Market, for an authentic London experience.
+                          </p>
+                  
+                          <!-- Buttons with page redirects -->
+                          <button class="btn btn-success" onclick="location.href='itinerary.html';"><i class="fas fa-plane-departure"></i> Book Now</button>
+                          <button class="btn btn-secondary" onclick="location.href='wow.html';"><i class="fas fa-info-circle"></i> Learn More</button>
+                      </div>
+                  </div>
+                  
                     
                     <div class="col-md-3">
                         <div class="card">
-                            <img src="https://via.placeholder.com/300x250" alt="Toronto">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/10/2f/e4/toronto.jpg?w=1400&h=1400&s=1" alt="Toronto">
                             <div class="card-body">
                                 <p class="destination-title">Toronto</p>
                                 <p class="destination-info">Canada - A multicultural city with iconic landmarks like the CN Tower.</p>
@@ -281,33 +312,52 @@
                                     <span class="rating">
                                         <span class="star-rating">★★★★</span> 4.4
                                     </span>
-                                    <button class="btn btn-primary see-more-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToronto">See More</button>
+                                    <button class="getstartedbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToronto">See More</button>
                             </div>
                             </div>
                         </div>
                     </div>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasToronto" aria-labelledby="offcanvasTorontoLabel">
-                        <div class="offcanvas-header">
-                            <h5 id="offcanvasTorontoLabel">Toronto</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <img src="https://via.placeholder.com/300x250" alt="Toronto" class="img-fluid mb-3">
-                            <p>Toronto is a major Canadian city known for its diverse culture and the CN Tower, one of the tallest structures in the world.</p>
-                            <h6>Popular Activities:</h6>
-                            <ul>
-                                <li>Visiting the CN Tower</li>
-                                <li>Exploring the Royal Ontario Museum</li>
-                                <li>Walking around Toronto Islands</li>
-                            </ul>
-                            <button class="btn btn-success">Book Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
+                      <div class="offcanvas-header">
+                          <h5 id="offcanvasTorontoLabel"><i class="fas fa-city"></i> Toronto - Canada's Cultural Hub</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/10/2f/e4/toronto.jpg?w=1400&h=1400&s=1" alt="Toronto" class="img-fluid mb-3">
+                  
+                          <p>
+                              <i class="fas fa-globe-americas"></i> Toronto, the largest city in Canada, is famous for its iconic skyline, diverse cultures, and landmarks such as the CN Tower, one of the tallest freestanding structures in the world.
+                          </p>
+                  
+                          <h6><i class="fas fa-star"></i> Popular Activities:</h6>
+                          <ul>
+                              <li><i class="fas fa-building"></i> Visiting the CN Tower</li>
+                              <li><i class="fas fa-landmark"></i> Exploring the Royal Ontario Museum</li>
+                              <li><i class="fas fa-water"></i> Walking around Toronto Islands</li>
+                              <li><i class="fas fa-shopping-cart"></i> Shopping in the Toronto Eaton Centre</li>
+                              <li><i class="fas fa-tree"></i> Exploring High Park, Toronto's largest public park</li>
+                          </ul>
+                  
+                          <h6><i class="fas fa-calendar-alt"></i> Best Time to Visit:</h6>
+                          <p>
+                              Visit Toronto between late April and early June or between September and October for pleasant weather and fewer crowds.
+                          </p>
+                  
+                          <h6><i class="fas fa-comments"></i> Traveler Tips:</h6>
+                          <p>
+                              Make sure to explore the multicultural neighborhoods, like Kensington Market and Chinatown, and don’t miss out on trying the local food scene, which is a melting pot of global flavors.
+                          </p>
+                  
+                          <!-- Buttons with page redirects -->
+                          <button class="btn btn-success" onclick="location.href='itinerary.html';"><i class="fas fa-plane-departure"></i> Book Now</button>
+                          <button class="btn btn-secondary" onclick="location.href='wow.html';"><i class="fas fa-info-circle"></i> Learn More</button>
+                      </div>
+                  </div>
+                  
                     
                     <div class="col-md-3">
                         <div class="card">
-                            <img src="https://via.placeholder.com/300x250" alt="New York">
+                            <img src="https://img.freepik.com/free-photo/central-park-manhattan-new-york-huge-beautiful-park-surrounded-by-skyscraper-with-pond_181624-50335.jpg" alt="New York">
                             <div class="card-body">
                                 <p class="destination-title">New York</p>
                                 <p class="destination-info">USA - The city that never sleeps, known for Times Square and the Statue of Liberty.</p>
@@ -315,29 +365,48 @@
                                     <span class="rating">
                                         <span class="star-rating">★★★★</span> 4.7
                                     </span>
-                                    <button class="btn btn-primary see-more-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNewYork">See More</button>
+                                    <button class="getstartedbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNewYork">See More</button>
                             </div>
                             </div>
                         </div>
                     </div>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNewYork" aria-labelledby="offcanvasNewYorkLabel">
-                        <div class="offcanvas-header">
-                            <h5 id="offcanvasNewYorkLabel">New York</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <img src="https://via.placeholder.com/300x250" alt="New York" class="img-fluid mb-3">
-                            <p>New York City, also known as the Big Apple, is famous for landmarks like the Statue of Liberty, Times Square, and Central Park.</p>
-                            <h6>Popular Activities:</h6>
-                            <ul>
-                                <li>Exploring Times Square</li>
-                                <li>Visiting the Statue of Liberty</li>
-                                <li>Shopping on Fifth Avenue</li>
-                            </ul>
-                            <button class="btn btn-success">Book Now</button>
-                            <button class="btn btn-secondary">Learn More</button>
-                        </div>
-                    </div>
+                      <div class="offcanvas-header">
+                          <h5 id="offcanvasNewYorkLabel"><i class="fas fa-city"></i> New York - The Big Apple</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          <img src="https://img.freepik.com/free-photo/central-park-manhattan-new-york-huge-beautiful-park-surrounded-by-skyscraper-with-pond_181624-50335.jpg" alt="New York" class="img-fluid mb-3">
+                  
+                          <p>
+                              <i class="fas fa-globe-americas"></i> New York City, also known as "The Big Apple," is a bustling metropolis famous for its skyline, world-renowned landmarks like the Statue of Liberty, and its vibrant cultural scene.
+                          </p>
+                  
+                          <h6><i class="fas fa-star"></i> Popular Activities:</h6>
+                          <ul>
+                              <li><i class="fas fa-tv"></i> Exploring Times Square</li>
+                              <li><i class="fas fa-landmark"></i> Visiting the Statue of Liberty and Ellis Island</li>
+                              <li><i class="fas fa-shopping-cart"></i> Shopping on Fifth Avenue</li>
+                              <li><i class="fas fa-tree"></i> Relaxing in Central Park</li>
+                              <li><i class="fas fa-museum"></i> Visiting the Metropolitan Museum of Art</li>
+                          </ul>
+                  
+                          <h6><i class="fas fa-calendar-alt"></i> Best Time to Visit:</h6>
+                          <p>
+                              Visit New York in the spring (April to June) or fall (September to November) for pleasant weather and fewer crowds.
+                          </p>
+                  
+                          <h6><i class="fas fa-comments"></i> Traveler Tips:</h6>
+                          <p>
+                              Don't miss out on catching a Broadway show and trying the iconic New York-style pizza. If you're feeling adventurous, take a walk across the Brooklyn Bridge for stunning views of the Manhattan skyline.
+                          </p>
+                  
+                          <!-- Buttons with page redirects -->
+                          <button class="btn btn-success" onclick="location.href='itinerary.html';"><i class="fas fa-plane-departure"></i> Book Now</button>
+                          <button class="btn btn-secondary" onclick="location.href='wow.html';"><i class="fas fa-info-circle"></i> Learn More</button>
+                      </div>
+                  </div>
+                  
                     
                 </div>
             </div>
@@ -347,7 +416,7 @@
               <div class="row">
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300x250" alt="Cambridge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/KingsCollegeChapelWest.jpg" alt="Cambridge">
                         <div class="card-body">
                             <p class="destination-title">Cambridge</p>
                             <p class="destination-info">UK - A historic city known for its university and architecture.</p>
@@ -355,33 +424,51 @@
                                 <span class="rating">
                                     <span class="star-rating">★★★★★</span> 5.0
                                 </span>
-                                <button class="btn btn-primary see-more-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCambridge">See More</button>
+                                <button class="getstartedbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCambridge">See More</button>
                         </div>
                         </div>
                     </div>
                 </div>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCambridge" aria-labelledby="offcanvasCambridgeLabel">
-                    <div class="offcanvas-header">
-                        <h5 id="offcanvasCambridgeLabel">Cambridge</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <img src="https://via.placeholder.com/300x250" alt="Cambridge" class="img-fluid mb-3">
-                        <p>Cambridge is renowned for its university, picturesque landscapes, and historic architecture.</p>
-                        <h6>Popular Activities:</h6>
-                        <ul>
-                            <li>Exploring Cambridge University</li>
-                            <li>Punting on the River Cam</li>
-                            <li>Visiting King's College Chapel</li>
-                        </ul>
-                        <button class="btn btn-success">Book Now</button>
-                        <button class="btn btn-secondary">Learn More</button>
-                    </div>
-                </div>
+                  <div class="offcanvas-header">
+                      <h5 id="offcanvasCambridgeLabel"><i class="fas fa-university"></i> Cambridge - A City of Scholars</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/KingsCollegeChapelWest.jpg" alt="Cambridge" class="img-fluid mb-3">
+                      
+                      <p>
+                          <i class="fas fa-book"></i> Cambridge, an iconic university city, is famous for its prestigious educational institutions, historic buildings, and the serene River Cam. A trip to Cambridge is a journey through centuries of history, culture, and academia.
+                      </p>
+                      
+                      <h6><i class="fas fa-map-marker-alt"></i> Popular Activities:</h6>
+                      <ul>
+                          <li><i class="fas fa-school"></i> Exploring the Cambridge University colleges</li>
+                          <li><i class="fas fa-water"></i> Punting along the scenic River Cam</li>
+                          <li><i class="fas fa-church"></i> Visiting the breathtaking King's College Chapel</li>
+                          <li><i class="fas fa-leaf"></i> Strolling through the University Botanic Garden</li>
+                      </ul>
+              
+                      <h6><i class="fas fa-calendar-alt"></i> Best Time to Visit:</h6>
+                      <p>
+                          The best time to visit Cambridge is during the spring and summer months (May to August), when the weather is warm, and the gardens and university courtyards are in full bloom.
+                      </p>
+              
+                      <h6><i class="fas fa-comments"></i> Traveler Tips:</h6>
+                      <p>
+                          Don’t miss out on punting—a popular activity in Cambridge where you can enjoy the serene views of the colleges from the river. The Fitzwilliam Museum is also a must-visit for art lovers.
+                      </p>
+              
+                      <!-- Buttons with page redirects -->
+                      <button class="btn btn-success" onclick="location.href='itinerary.html';"><i class="fas fa-plane-departure"></i> Book Now</button>
+                      <button class="btn btn-secondary" onclick="location.href='wow.html';"><i class="fas fa-info-circle"></i> Learn More</button>
+                  </div>
+              </div>
+              
                 
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300x250" alt="Waterloo">
+                        <img src="https://media.istockphoto.com/id/1280983517/photo/st-jacobs-railway-bridge-and-conestogo-river-at-dusk-in-st-jacobs-village-waterloo-region.jpg?s=612x612&w=0&k=20&c=PRSOzMJ3HgZt0C48Ots2Ho0MjCpPcXf9zio3x4nP44U=" alt="Waterloo">
                         <div class="card-body">
                             <p class="destination-title">Waterloo</p>
                             <p class="destination-info">Canada - A hub of education and technology in Ontario.</p>
@@ -389,33 +476,51 @@
                                 <span class="rating">
                                     <span class="star-rating">★★★★★</span> 4.9
                                 </span>
-                                <button class="btn btn-primary see-more-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWaterloo">See More</button>
+                                <button class="getstartedbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWaterloo">See More</button>
                         </div>
                         </div>
                     </div>
                 </div>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWaterloo" aria-labelledby="offcanvasWaterlooLabel">
-                    <div class="offcanvas-header">
-                        <h5 id="offcanvasWaterlooLabel">Waterloo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <img src="https://via.placeholder.com/300x250" alt="Waterloo" class="img-fluid mb-3">
-                        <p>Waterloo is known for its universities, tech startups, and its blend of modern and traditional attractions.</p>
-                        <h6>Popular Activities:</h6>
-                        <ul>
-                            <li>Visiting University of Waterloo</li>
-                            <li>Exploring Uptown Waterloo</li>
-                            <li>Touring the Perimeter Institute for Theoretical Physics</li>
-                        </ul>
-                        <button class="btn btn-success">Book Now</button>
-                        <button class="btn btn-secondary">Learn More</button>
-                    </div>
-                </div>
+                  <div class="offcanvas-header">
+                      <h5 id="offcanvasWaterlooLabel"><i class="fas fa-university"></i> Waterloo - Where Innovation Meets Tradition</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                      <img src="https://media.istockphoto.com/id/1280983517/photo/st-jacobs-railway-bridge-and-conestogo-river-at-dusk-in-st-jacobs-village-waterloo-region.jpg?s=612x612&w=0&k=20&c=PRSOzMJ3HgZt0C48Ots2Ho0MjCpPcXf9zio3x4nP44U=" alt="Waterloo" class="img-fluid mb-3">
+                      
+                      <p>
+                          <i class="fas fa-laptop-code"></i> Waterloo is a hub of technological innovation and education, known for its prestigious universities, vibrant startup ecosystem, and the serene beauty of surrounding rural landscapes.
+                      </p>
+              
+                      <h6><i class="fas fa-map-marker-alt"></i> Popular Activities:</h6>
+                      <ul>
+                          <li><i class="fas fa-school"></i> Visiting the University of Waterloo and its renowned research centers</li>
+                          <li><i class="fas fa-city"></i> Exploring the bustling Uptown Waterloo with its shops, cafes, and galleries</li>
+                          <li><i class="fas fa-atom"></i> Touring the Perimeter Institute for Theoretical Physics, a world-leading research center</li>
+                          <li><i class="fas fa-tree"></i> Strolling through Waterloo Park, a perfect blend of nature and recreation</li>
+                      </ul>
+              
+                      <h6><i class="fas fa-calendar-alt"></i> Best Time to Visit:</h6>
+                      <p>
+                          Waterloo shines in the spring and summer months (May to September), when its parks and outdoor spaces are perfect for exploration, and local festivals bring the community to life.
+                      </p>
+              
+                      <h6><i class="fas fa-comments"></i> Traveler Tips:</h6>
+                      <p>
+                          Don’t miss a visit to St. Jacobs Farmers' Market, just outside Waterloo, for an authentic local experience filled with handmade goods and fresh produce.
+                      </p>
+              
+                      <!-- Buttons with page redirects -->
+                      <button class="btn btn-success" onclick="location.href='itinerary.html';"><i class="fas fa-plane-departure"></i> Book Now</button>
+                      <button class="btn btn-secondary" onclick="location.href='wow.html';"><i class="fas fa-info-circle"></i> Learn More</button>
+                  </div>
+              </div>
+              
                 
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300x250" alt="Surat">
+                        <img src="https://media.licdn.com/dms/image/C5112AQGpCVnMc_83Kg/article-cover_image-shrink_600_2000/0/1529566209376?e=2147483647&v=beta&t=3F4DPiZhHO-jYdaGS7j--oJhLQFJVERdcJApQ0h1pl0" alt="Surat">
                         <div class="card-body">
                             <p class="destination-title">Surat</p>
                             <p class="destination-info">India - A bustling city known for its textile and diamond industries.</p>
@@ -423,33 +528,50 @@
                                 <span class="rating">
                                     <span class="star-rating">★★★★★</span> 5.0
                                 </span>
-                                <button class="btn btn-primary see-more-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSurat">See More</button>
+                                <button class="getstartedbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSurat">See More</button>
                         </div>
                         </div>
                     </div>
                 </div>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSurat" aria-labelledby="offcanvasSuratLabel">
-                    <div class="offcanvas-header">
-                        <h5 id="offcanvasSuratLabel">Surat</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <img src="https://via.placeholder.com/300x250" alt="Surat" class="img-fluid mb-3">
-                        <p>Surat is known for its textile and diamond industries and offers a blend of modern and traditional culture.</p>
-                        <h6>Popular Activities:</h6>
-                        <ul>
-                            <li>Exploring Dumas Beach</li>
-                            <li>Visiting the Dutch Garden</li>
-                            <li>Shopping at the textile markets</li>
-                        </ul>
-                        <button class="btn btn-success">Book Now</button>
-                        <button class="btn btn-secondary">Learn More</button>
-                    </div>
-                </div>
+                  <div class="offcanvas-header">
+                      <h5 id="offcanvasSuratLabel"><i class="fas fa-gem"></i> Surat - The Diamond City</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                      <img src="https://media.licdn.com/dms/image/C5112AQGpCVnMc_83Kg/article-cover_image-shrink_600_2000/0/1529566209376?e=2147483647&v=beta&t=3F4DPiZhHO-jYdaGS7j--oJhLQFJVERdcJApQ0h1pl0" alt="Surat" class="img-fluid mb-3">
+                      
+                      <p>
+                          <i class="fas fa-industry"></i> Surat, often called the "Diamond City" of India, is famous for its thriving textile and diamond industries, and offers a rich cultural experience with a mix of modern and historical attractions.
+                      </p>
+              
+                      <h6><i class="fas fa-map-marker-alt"></i> Popular Activities:</h6>
+                      <ul>
+                          <li><i class="fas fa-umbrella-beach"></i> Exploring the scenic Dumas Beach</li>
+                          <li><i class="fas fa-tree"></i> Visiting the beautiful Dutch Garden, a glimpse into Surat's colonial past</li>
+                          <li><i class="fas fa-shopping-bag"></i> Shopping for textiles at the bustling markets, a shopper’s paradise</li>
+                      </ul>
+              
+                      <h6><i class="fas fa-calendar-alt"></i> Best Time to Visit:</h6>
+                      <p>
+                          The ideal time to visit Surat is during the cooler months, from October to March, when the weather is pleasant for sightseeing and outdoor activities.
+                      </p>
+              
+                      <h6><i class="fas fa-lightbulb"></i> Traveler Tips:</h6>
+                      <p>
+                          Don’t miss trying Surat's famous street food, especially "Surti Sev Khamani" and "Locho," which are local delicacies.
+                      </p>
+              
+                      <!-- Buttons with page redirects -->
+                      <button class="btn btn-success" onclick="location.href='itinerary.html';"><i class="fas fa-plane-departure"></i> Book Now</button>
+                      <button class="btn btn-secondary" onclick="location.href='wow.html';"><i class="fas fa-info-circle"></i> Learn More</button>
+                  </div>
+              </div>
+              
                 
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300x250" alt="Mumbai">
+                        <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Chhatrapati-Shivaji-Terminus-railway-station-mumbai.jpg" alt="Mumbai">
                         <div class="card-body">
                             <p class="destination-title">Mumbai</p>
                             <p class="destination-info">India - The financial capital of India, known for Bollywood and Marine Drive.</p>
@@ -457,29 +579,45 @@
                                 <span class="rating">
                                     <span class="star-rating">★★★★★</span> 5.0
                                 </span>
-                                <button class="btn btn-primary see-more-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMumbai">See More</button>
+                                <button class="getstartedbtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMumbai">See More</button>
                         </div>
                         </div>
                     </div>
                 </div>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMumbai" aria-labelledby="offcanvasMumbaiLabel">
-                    <div class="offcanvas-header">
-                        <h5 id="offcanvasMumbaiLabel">Mumbai</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <img src="https://via.placeholder.com/300x250" alt="Mumbai" class="img-fluid mb-3">
-                        <p>Mumbai, India's financial hub, is known for Bollywood, Marine Drive, and the Gateway of India.</p>
-                        <h6>Popular Activities:</h6>
-                        <ul>
-                            <li>Visiting the Gateway of India</li>
-                            <li>Exploring Marine Drive</li>
-                            <li>Touring Bollywood film sets</li>
-                        </ul>
-                        <button class="btn btn-success">Book Now</button>
-                        <button class="btn btn-secondary">Learn More</button>
-                    </div>
-                </div>
+                  <div class="offcanvas-header">
+                      <h5 id="offcanvasMumbaiLabel"><i class="fas fa-city"></i> Mumbai - The City of Dreams</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                      <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Chhatrapati-Shivaji-Terminus-railway-station-mumbai.jpg" alt="Mumbai" class="img-fluid mb-3">
+                      
+                      <p>
+                          <i class="fas fa-rupee-sign"></i> Mumbai, known as the financial capital of India, is famous for its vibrant culture, Bollywood film industry, and stunning landmarks such as Marine Drive and the Gateway of India.
+                      </p>
+              
+                      <h6><i class="fas fa-map-marker-alt"></i> Popular Activities:</h6>
+                      <ul>
+                          <li><i class="fas fa-landmark"></i> Visiting the iconic Gateway of India</li>
+                          <li><i class="fas fa-water"></i> Exploring the scenic Marine Drive, perfect for evening strolls</li>
+                          <li><i class="fas fa-film"></i> Touring Bollywood film sets and experiencing the magic of Indian cinema</li>
+                      </ul>
+              
+                      <h6><i class="fas fa-calendar-alt"></i> Best Time to Visit:</h6>
+                      <p>
+                          The best time to visit Mumbai is from November to February, when the weather is mild and perfect for sightseeing.
+                      </p>
+              
+                      <h6><i class="fas fa-lightbulb"></i> Traveler Tips:</h6>
+                      <p>
+                          Be sure to try the local street food, especially "Vada Pav" and "Pani Puri," which are must-try delicacies for any visitor.
+                      </p>
+                      <!-- Buttons with page redirects -->
+                      <button class="btn btn-success" onclick="location.href='itinerary.html';"><i class="fas fa-plane-departure"></i> Book Now</button>
+                      <button class="btn btn-secondary" onclick="location.href='wow.html';"><i class="fas fa-info-circle"></i> Learn More</button>
+                  </div>
+              </div>
+              
                 
               </div>
           </div>
@@ -491,12 +629,14 @@
 
 <section class="faq-section py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <h2 class="text-center mb-4 faq-heading">🔍 Frequently Asked Questions</h2>
+    <p class="text-muted text-center">Get quick answers to the most common questions about planning, booking, and enjoying your travels with Roamio.</p>
+
     <div class="accordion" id="faqAccordion">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            How does the weather forecast work?
+          <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="fas fa-cloud-sun me-2"></i> How does the weather forecast work?
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
@@ -507,8 +647,8 @@
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Can I check the weather for multiple cities?
+          <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fas fa-map-marker-alt me-2"></i> Can I check the weather for multiple cities?
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
@@ -519,45 +659,94 @@
       </div>
     </div>
   </div>
-  
+  <div class="d-flex justify-content-center align-items-center">
+    <a href="contact.html" class="getstartedbtn" role="button">
+        Read More
+    </a>
+  </div>
 </section>
-<!-- Bootstrap Centered Button -->
-<div class="d-flex justify-content-center align-items-center">
-  <a href="https://yourlink.com" class="btn btn-primary btn-lg" role="button">
-      Read More
-  </a>
-</div>
+
 
   
 <br><br><br>
-<footer class="bg-light text-left text-lg-start">
+<footer class="footer-section text-left text-lg-start">
   <div class="container p-4">
     <div class="row">
       <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase text-dark">Travel Planner</h5>
-        <p class="text-dark">Plan your dream trip with ease using our intuitive itinerary builder, budget calculator, and weather forecast tools.</p>
+<div class="footer-brand">
+    <img src="assets/img/logo.png" alt="Roamio Logo" class="footer-logo">
+</div>
+        <p class="text-dark">
+          Plan your dream trip with ease using our intuitive itinerary builder, budget calculator, and weather forecast tools.
+        </p>
+        
+        <!-- Newsletter Signup -->
+        <div class="newsletter-signup mt-4">
+          <h5 class="text-uppercase text-dark">Subscribe To Our Newsletter</h5>
+          <form>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+                <button class="btn btn-warning" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
       </div>
+      
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 class="text-uppercase text-dark">Links</h5>
         <ul class="list-unstyled mb-0">
           <li><a href="index.html" style="text-decoration: none; color: #000;">Home</a></li>
-          <li><a href="search.html" style="text-decoration: none; color: #000;">Search Destinations</a></li>
+          <li><a href="wow.html" style="text-decoration: none; color: #000;">Search Destinations</a></li>
           <li><a href="itinerary.html" style="text-decoration: none; color: #000;">Itinerary Builder</a></li>
+          <li><a href="budget.html" style="text-decoration: none; color: #000;">Budget</a></li>
+          <li><a href="weather.html" style="text-decoration: none; color: #000;">Weather</a></li>
+          <li><a href="testimonial.html" style="text-decoration: none; color: #000;">Reviews</a></li>
+          <li><a href="about.html" style="text-decoration: none; color: #000;">About</a></li>
           <li><a href="contact.html" style="text-decoration: none; color: #000;">Contact</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 class="text-uppercase text-dark">Follow Us</h5>
-        <ul class="list-unstyled mb-0">
-          <li><a href="#!" style="text-decoration: none; color: #000;">Facebook</a></li>
-          <li><a href="#!" style="text-decoration: none; color: #000;">Twitter</a></li>
-          <li><a href="#!" style="text-decoration: none; color: #000;">Instagram</a></li>
+        <ul class="list-inline social-links mb-0">
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="social-icon" aria-label="Pinterest">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </li>
         </ul>
       </div>
+      
+      
     </div>
   </div>
-  <div class="text-center p-3" style="background-color: rgb(59, 59, 59);">
-    © 2024 Travel Planner | Designed by Utsav Jhakhariya
+  <br>
+  <div class="copyright text-center p-3">
+    © 2024 ROAMIO | By Utsav Jhakhariya
   </div>
 </footer>
 
@@ -568,11 +757,17 @@
     document.addEventListener("DOMContentLoaded", function() {
       const user = JSON.parse(localStorage.getItem('user'));
       if (user && user.name) {
-        document.getElementById('greeting').textContent = `Hey ${user.name}, how's it going?`;
+        document.getElementById('greeting').innerHTML = `Hey ${user.name}&#x1F44B;<h2>how's it going?</h2>`;
       } else {
         document.getElementById('greeting').textContent = "Hey there!";
       }
     });
+
+    document.getElementById('chat-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.location.href = 'one.html';
+});
+
   </script>
 </body>
 </html>
