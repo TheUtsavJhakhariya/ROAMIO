@@ -1353,7 +1353,7 @@ function displayMustDoActivities(cityData) {
 function displayMustTryFood(cityData) {
   $('#mustTryFood').empty(); // Clear previous food items
 
-  const foodItems = cityData.key_information.Local_Food_Cuisine;
+  const foodItems = cityData.key_information.Local_Food_Cuisine; 
 
   foodItems.slice(0, 6).forEach(food => {
       const imageUrl = food.image ? food.image : "https://via.placeholder.com/150"; // Use actual URL or placeholder if missing
